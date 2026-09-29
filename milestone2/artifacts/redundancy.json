@@ -1,0 +1,52 @@
+{
+  "redundant_pairs": [
+    [
+      "f_seconds_in_day",
+      "f_diurnal_sin",
+      -0.756
+    ],
+    [
+      "f_diurnal_cos",
+      "f_is_business_hours",
+      -0.811
+    ],
+    [
+      "f_adminport_conn_60s",
+      "f_inbound_adminport_60s",
+      0.857
+    ],
+    [
+      "f_adminport_conn_60s",
+      "f_inbound_peers_300s",
+      0.764
+    ],
+    [
+      "f_cmdline_len",
+      "f_cmdline_entropy",
+      0.924
+    ],
+    [
+      "f_cmdline_len",
+      "f_integrity_high",
+      0.875
+    ],
+    [
+      "f_cmdline_entropy",
+      "f_integrity_high",
+      0.946
+    ]
+  ],
+  "zero_variance": {
+    "LMD": [
+      "f_explicit_cred_4648",
+      "f_network_logon_t3",
+      "f_kerberos_tgs_4769",
+      "f_admin_share_access",
+      "f_service_install",
+      "f_sec_observed"
+    ],
+    "Mordor": [
+      "f_weekday"
+    ]
+  }
+}

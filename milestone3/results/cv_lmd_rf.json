@@ -1,0 +1,970 @@
+{
+ "model": "rf",
+ "features": [
+  "f_inter_event_dt_log",
+  "f_host_evt_rate_60s",
+  "f_host_proc_create_60s",
+  "f_host_netconn_60s",
+  "f_distinct_dstport_300s",
+  "f_distinct_dstip_300s",
+  "f_adminport_conn_60s",
+  "f_inbound_adminport_60s",
+  "f_inbound_peers_300s",
+  "f_lolbin_parent_child",
+  "f_remote_exec_parent",
+  "f_remote_exec_after_inbound",
+  "f_image_is_lolbin",
+  "f_exec_from_staging",
+  "f_cmdline_entropy",
+  "f_cmdline_susp",
+  "f_integrity_high",
+  "f_admin_port_flag",
+  "f_initiated",
+  "f_is_ipv6",
+  "f_lsass_access",
+  "f_cred_access_mask",
+  "f_exec_file_drop",
+  "f_file_drop_staging",
+  "f_host_out_degree_1h",
+  "f_rare_dst_pair",
+  "f_distinct_users_60s",
+  "f_explicit_cred_4648",
+  "f_network_logon_t3",
+  "f_kerberos_tgs_4769",
+  "f_admin_share_access",
+  "f_service_install",
+  "f_sec_observed",
+  "f_net_observed",
+  "f_event_category"
+ ],
+ "n_features": 35,
+ "params": {
+  "n_estimators": 300,
+  "max_depth": 12,
+  "min_samples_leaf": 20,
+  "max_features": "sqrt",
+  "class_weight": "balanced_subsample",
+  "n_jobs": -1,
+  "random_state": 42
+ },
+ "fold_metrics": [
+  {
+   "n": 350586,
+   "pos": 28235,
+   "thr": 0.773688600762072,
+   "tp": 27335,
+   "fp": 13,
+   "fn": 900,
+   "tn": 322338,
+   "precision": 0.9995246453122715,
+   "recall": 0.9681246679652913,
+   "f1": 0.9835741143874925,
+   "fpr": 4.032871000865516e-05,
+   "fnr": 0.031875332034708694,
+   "accuracy": 0.9973957887650962,
+   "roc_auc": 0.999978382106237,
+   "pr_auc": 0.9997581102679411,
+   "fold": 0,
+   "n_train": 1123783,
+   "n_val": 278467,
+   "seconds": 60.1
+  },
+  {
+   "n": 350578,
+   "pos": 28235,
+   "thr": 0.6754003115736318,
+   "tp": 28073,
+   "fp": 183,
+   "fn": 162,
+   "tn": 322160,
+   "precision": 0.9935234994337486,
+   "recall": 0.9942624402337524,
+   "f1": 0.9938928324865908,
+   "fpr": 0.0005677182380259537,
+   "fnr": 0.005737559766247565,
+   "accuracy": 0.9990159108671964,
+   "roc_auc": 0.9999904034065487,
+   "pr_auc": 0.9998926420002379,
+   "fold": 1,
+   "n_train": 1123028,
+   "n_val": 279230,
+   "seconds": 61.1
+  },
+  {
+   "n": 350586,
+   "pos": 28234,
+   "thr": 0.4128440018292011,
+   "tp": 28234,
+   "fp": 1256,
+   "fn": 0,
+   "tn": 321096,
+   "precision": 0.9574092912851814,
+   "recall": 1.0,
+   "f1": 0.9782412861201579,
+   "fpr": 0.003896361741202164,
+   "fnr": 0.0,
+   "accuracy": 0.99641742682252,
+   "roc_auc": 0.9999903492763058,
+   "pr_auc": 0.9998824525721769,
+   "fold": 2,
+   "n_train": 1118040,
+   "n_val": 284210,
+   "seconds": 61.3
+  },
+  {
+   "n": 350467,
+   "pos": 28252,
+   "thr": 0.48168558629235375,
+   "tp": 28244,
+   "fp": 246,
+   "fn": 8,
+   "tn": 321969,
+   "precision": 0.9913653913653914,
+   "recall": 0.9997168342064279,
+   "f1": 0.9955235980402524,
+   "fpr": 0.0007634653880173177,
+   "fnr": 0.0002831657935721365,
+   "accuracy": 0.9992752527342089,
+   "roc_auc": 0.9999959180369771,
+   "pr_auc": 0.999953947626244,
+   "fold": 3,
+   "n_train": 1120691,
+   "n_val": 281678,
+   "seconds": 56.9
+  },
+  {
+   "n": 350619,
+   "pos": 28261,
+   "thr": 0.5123639215895917,
+   "tp": 28152,
+   "fp": 2136,
+   "fn": 109,
+   "tn": 320222,
+   "precision": 0.9294770206022187,
+   "recall": 0.9961430947241782,
+   "f1": 0.9616560487796546,
+   "fpr": 0.006626173384870237,
+   "fnr": 0.003856905275821804,
+   "accuracy": 0.9935970383806925,
+   "roc_auc": 0.9998785684259943,
+   "pr_auc": 0.998703942976867,
+   "fold": 4,
+   "n_train": 1123222,
+   "n_val": 278995,
+   "seconds": 60.7
+  }
+ ],
+ "fold_metrics_thr05": [
+  {
+   "n": 350586,
+   "pos": 28235,
+   "thr": 0.5,
+   "tp": 27925,
+   "fp": 132,
+   "fn": 310,
+   "tn": 322219,
+   "precision": 0.9952952917275546,
+   "recall": 0.9890207189658226,
+   "f1": 0.9921480849854332,
+   "fpr": 0.0004094915170109601,
+   "fnr": 0.010979281034177439,
+   "accuracy": 0.9987392537066512,
+   "roc_auc": 0.999978382106237,
+   "pr_auc": 0.9997581102679411
+  },
+  {
+   "n": 350578,
+   "pos": 28235,
+   "thr": 0.5,
+   "tp": 28228,
+   "fp": 572,
+   "fn": 7,
+   "tn": 321771,
+   "precision": 0.9801388888888889,
+   "recall": 0.9997520807508412,
+   "f1": 0.9898483387393706,
+   "fpr": 0.001774507279512817,
+   "fnr": 0.0002479192491588454,
+   "accuracy": 0.9983484417162515,
+   "roc_auc": 0.9999904034065487,
+   "pr_auc": 0.9998926420002379
+  },
+  {
+   "n": 350586,
+   "pos": 28234,
+   "thr": 0.5,
+   "tp": 28234,
+   "fp": 454,
+   "fn": 0,
+   "tn": 321898,
+   "precision": 0.9841745677635249,
+   "recall": 1.0,
+   "f1": 0.9920241734303081,
+   "fpr": 0.0014083982726956867,
+   "fnr": 0.0,
+   "accuracy": 0.9987050253004969,
+   "roc_auc": 0.9999903492763058,
+   "pr_auc": 0.9998824525721769
+  },
+  {
+   "n": 350467,
+   "pos": 28252,
+   "thr": 0.5,
+   "tp": 28244,
+   "fp": 205,
+   "fn": 8,
+   "tn": 322010,
+   "precision": 0.9927941228162677,
+   "recall": 0.9997168342064279,
+   "f1": 0.9962434524964285,
+   "fpr": 0.0006362211566810981,
+   "fnr": 0.0002831657935721365,
+   "accuracy": 0.9993922394975846,
+   "roc_auc": 0.9999959180369771,
+   "pr_auc": 0.999953947626244
+  },
+  {
+   "n": 350619,
+   "pos": 28261,
+   "thr": 0.5,
+   "tp": 28159,
+   "fp": 2251,
+   "fn": 102,
+   "tn": 320107,
+   "precision": 0.9259782966129563,
+   "recall": 0.9963907858886805,
+   "f1": 0.9598950077551088,
+   "fpr": 0.006982919611115592,
+   "fnr": 0.003609214111319486,
+   "accuracy": 0.9932890117192736,
+   "roc_auc": 0.9998785684259943,
+   "pr_auc": 0.998703942976867
+  }
+ ],
+ "fold_thresholds": [
+  0.773688600762072,
+  0.6754003115736318,
+  0.4128440018292011,
+  0.48168558629235375,
+  0.5123639215895917
+ ],
+ "threshold": 0.5123639215895917,
+ "summary": {
+  "f1": {
+   "mean": 0.9825775759628297,
+   "std": 0.012273070650293308
+  },
+  "precision": {
+   "mean": 0.9742599695997622,
+   "std": 0.026800898324053496
+  },
+  "recall": {
+   "mean": 0.9916494074259299,
+   "std": 0.011960353706115324
+  },
+  "fpr": {
+   "mean": 0.0023788094924248656,
+   "std": 0.0025179732063607078
+  },
+  "fnr": {
+   "mean": 0.008350592574070038,
+   "std": 0.011960353706115317
+  },
+  "roc_auc": {
+   "mean": 0.9999667242504126,
+   "std": 4.444879399721072e-05
+  },
+  "pr_auc": {
+   "mean": 0.9996382190886933,
+   "std": 0.00047144697894628253
+  }
+ },
+ "summary_thr05": {
+  "f1": {
+   "mean": 0.9860318114813298,
+   "std": 0.013230972790087461
+  },
+  "precision": {
+   "mean": 0.9756762335618385,
+   "std": 0.02545565355508803
+  },
+  "recall": {
+   "mean": 0.9969760839623543,
+   "std": 0.004195052903978654
+  },
+  "fpr": {
+   "mean": 0.002242307567403231,
+   "std": 0.0024218328845493245
+  },
+  "fnr": {
+   "mean": 0.0030239160376455817,
+   "std": 0.004195052903978641
+  },
+  "roc_auc": {
+   "mean": 0.9999667242504126,
+   "std": 4.444879399721072e-05
+  },
+  "pr_auc": {
+   "mean": 0.9996382190886933,
+   "std": 0.00047144697894628253
+  }
+ },
+ "oof_metrics": {
+  "n": 1752836,
+  "pos": 141217,
+  "tp": 140038,
+  "fp": 3834,
+  "fn": 1179,
+  "tn": 1607785,
+  "precision": 0.9733513122775801,
+  "recall": 0.9916511468166014,
+  "f1": 0.9824160174541985,
+  "fpr": 0.0023789741868270355,
+  "fnr": 0.0083488531833986,
+  "accuracy": 0.9971400633031271,
+  "roc_auc": 0.9999655620288026,
+  "pr_auc": 0.9996235284174433,
+  "thr": "per-fold"
+ },
+ "oof_metrics_thr05": {
+  "n": 1752836,
+  "pos": 141217,
+  "thr": 0.5,
+  "tp": 140790,
+  "fp": 3614,
+  "fn": 427,
+  "tn": 1608005,
+  "precision": 0.9749729924378826,
+  "recall": 0.9969762847249268,
+  "f1": 0.9858518806390286,
+  "fpr": 0.0022424654958771275,
+  "fnr": 0.0030237152750731146,
+  "accuracy": 0.9976945932192173,
+  "roc_auc": 0.9999655620288026,
+  "pr_auc": 0.9996235284174433
+ },
+ "lgbm_iterations": [],
+ "fold_bands": [
+  [
+   0.6545218069740647,
+   0.6545238069740648
+  ],
+  [
+   0.6489317515046719,
+   0.6489337515046719
+  ],
+  [
+   0.6146205432098589,
+   0.614622543209859
+  ],
+  [
+   0.5327676111995115,
+   0.5327696111995116
+  ],
+  [
+   0.6812329471481743,
+   0.6812349471481743
+  ]
+ ],
+ "error_analysis": {
+  "thr": 0.5,
+  "counts": {
+   "tp": 140038,
+   "fp": 3834,
+   "fn": 1179,
+   "tn": 1607785
+  },
+  "fp_by_category": {
+   "network_conn": {
+    "share": 0.272,
+    "share_in_reference": 0.858
+   },
+   "process_create": {
+    "share": 0.262,
+    "share_in_reference": 0.012
+   },
+   "dns": {
+    "share": 0.24,
+    "share_in_reference": 0.006
+   },
+   "registry": {
+    "share": 0.089,
+    "share_in_reference": 0.011
+   },
+   "process_end": {
+    "share": 0.057,
+    "share_in_reference": 0.107
+   },
+   "file_create": {
+    "share": 0.039,
+    "share_in_reference": 0.006
+   },
+   "file_stream": {
+    "share": 0.031,
+    "share_in_reference": 0.0
+   },
+   "other": {
+    "share": 0.004,
+    "share_in_reference": 0.0
+   }
+  },
+  "fn_by_category": {
+   "network_conn": {
+    "share": 0.362,
+    "share_in_reference": 0.195
+   },
+   "process_create": {
+    "share": 0.23,
+    "share_in_reference": 0.054
+   },
+   "dns": {
+    "share": 0.159,
+    "share_in_reference": 0.005
+   },
+   "process_end": {
+    "share": 0.094,
+    "share_in_reference": 0.008
+   },
+   "file_create": {
+    "share": 0.079,
+    "share_in_reference": 0.001
+   },
+   "registry": {
+    "share": 0.062,
+    "share_in_reference": 0.01
+   },
+   "file_delete": {
+    "share": 0.005,
+    "share_in_reference": 0.163
+   },
+   "process_access": {
+    "share": 0.004,
+    "share_in_reference": 0.23
+   }
+  },
+  "fp_by_host": {
+   "WINDOWS10EVAL.stefania.local": 0.636,
+   "WIN-J23NIGGP1Q6.sysmon_set.local": 0.336,
+   "LAPTOP-ROPR18AK": 0.025,
+   "win-dc-128.attackrange.local": 0.002,
+   "win-host-987.attackrange.local": 0.001
+  },
+  "fn_by_host": {
+   "WINDOWS10EVAL.stefania.local": 0.501,
+   "WIN-J23NIGGP1Q6.sysmon_set.local": 0.428,
+   "win-dc-128.attackrange.local": 0.051,
+   "LAPTOP-ROPR18AK": 0.009,
+   "win-host-987.attackrange.local": 0.009,
+   "win-dc-469.attackrange.local": 0.001
+  },
+  "fp_feature_shift_vs_tn": {
+   "f_host_proc_create_60s": {
+    "error_median": 12.0,
+    "reference_median": 0.0,
+    "shift_iqr": 12.0
+   },
+   "f_host_netconn_60s": {
+    "error_median": 1.0,
+    "reference_median": 55.0,
+    "shift_iqr": -4.153846153846154
+   },
+   "f_host_out_degree_1h": {
+    "error_median": 4.0,
+    "reference_median": 335.0,
+    "shift_iqr": -2.7131147540983607
+   },
+   "f_distinct_dstport_300s": {
+    "error_median": 1.0,
+    "reference_median": 2.0,
+    "shift_iqr": -1.0
+   },
+   "f_distinct_dstip_300s": {
+    "error_median": 0.0,
+    "reference_median": 18.0,
+    "shift_iqr": -0.45
+   },
+   "f_inter_event_dt_log": {
+    "error_median": 0.550967642995912,
+    "reference_median": 0.5312533497649077,
+    "shift_iqr": 0.03147607107897015
+   },
+   "f_host_evt_rate_60s": {
+    "error_median": 60.0,
+    "reference_median": 60.0,
+    "shift_iqr": 0.0
+   },
+   "f_adminport_conn_60s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_inbound_peers_300s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_inbound_adminport_60s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_parent": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_after_inbound": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_image_is_lolbin": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_from_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_entropy": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_susp": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_integrity_high": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_lolbin_parent_child": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_admin_port_flag": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_initiated": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_lsass_access": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_is_ipv6": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cred_access_mask": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_file_drop": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_file_drop_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   }
+  },
+  "fn_feature_shift_vs_tp": {
+   "f_host_proc_create_60s": {
+    "error_median": 18.0,
+    "reference_median": 1.0,
+    "shift_iqr": 17.0
+   },
+   "f_adminport_conn_60s": {
+    "error_median": 5.0,
+    "reference_median": 0.0,
+    "shift_iqr": 5.0
+   },
+   "f_distinct_users_60s": {
+    "error_median": 3.0,
+    "reference_median": 1.0,
+    "shift_iqr": 2.0
+   },
+   "f_host_evt_rate_60s": {
+    "error_median": 59.0,
+    "reference_median": 53.0,
+    "shift_iqr": 1.0
+   },
+   "f_distinct_dstport_300s": {
+    "error_median": 1.0,
+    "reference_median": 2.0,
+    "shift_iqr": -1.0
+   },
+   "f_inbound_adminport_60s": {
+    "error_median": 1.0,
+    "reference_median": 0.0,
+    "shift_iqr": 1.0
+   },
+   "f_host_netconn_60s": {
+    "error_median": 9.0,
+    "reference_median": 1.0,
+    "shift_iqr": 0.6153846153846154
+   },
+   "f_inter_event_dt_log": {
+    "error_median": 0.5623748354039281,
+    "reference_median": 0.6396994615334982,
+    "shift_iqr": -0.12345740218479773
+   },
+   "f_distinct_dstip_300s": {
+    "error_median": 3.0,
+    "reference_median": 2.0,
+    "shift_iqr": 0.025
+   },
+   "f_host_out_degree_1h": {
+    "error_median": 4.0,
+    "reference_median": 6.0,
+    "shift_iqr": -0.01639344262295082
+   },
+   "f_remote_exec_parent": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_after_inbound": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_image_is_lolbin": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_from_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_entropy": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_susp": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_inbound_peers_300s": {
+    "error_median": 1.0,
+    "reference_median": 1.0,
+    "shift_iqr": 0.0
+   },
+   "f_lolbin_parent_child": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_admin_port_flag": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_integrity_high": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_lsass_access": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_initiated": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cred_access_mask": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_file_drop": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_file_drop_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   }
+  },
+  "fp_score_quantiles": [
+   0.5791989284160657,
+   0.7862526741016854,
+   0.962057383818834
+  ],
+  "fn_score_quantiles": [
+   -0.006253286006689699,
+   0.09207659361914709,
+   0.364417722320482
+  ],
+  "most_confident_fp": [
+   {
+    "row_id": 788257,
+    "score": 1.0716515021536601,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788279,
+    "score": 1.0713775912315806,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788270,
+    "score": 1.0712977628731077,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788269,
+    "score": 1.0658478313825808,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58846,
+    "score": 1.0639867143613968,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788280,
+    "score": 1.0601928854799672,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58829,
+    "score": 1.0588529430582434,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58828,
+    "score": 1.0587631339717634,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788285,
+    "score": 1.0561912539405147,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788276,
+    "score": 1.0424922336198852,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58817,
+    "score": 1.0395212078504201,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58833,
+    "score": 1.029677909210211,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 6491,
+    "score": 1.0267550215801444,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 58824,
+    "score": 1.0139155830771571,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788266,
+    "score": 1.0125301717089679,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58843,
+    "score": 1.0088517986797862,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788260,
+    "score": 1.0013997809522788,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58819,
+    "score": 1.0013997809522788,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 788295,
+    "score": 1.0002982544745151,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 58816,
+    "score": 0.9936068101078425,
+    "category": "network_conn",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   }
+  ],
+  "most_confident_fn": [
+   {
+    "row_id": 1611854,
+    "score": -0.06792391983238999,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611885,
+    "score": -0.06771227098856891,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611849,
+    "score": -0.05279202339786182,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611887,
+    "score": -0.024297361492159886,
+    "category": "network_conn",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1751329,
+    "score": -0.020744010744931263,
+    "category": "process_end",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 1611675,
+    "score": -0.01907340213976605,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1751330,
+    "score": -0.017951681514638218,
+    "category": "process_end",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 1611868,
+    "score": -0.014836286623636674,
+    "category": "process_end",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611691,
+    "score": -0.014315504968701598,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611696,
+    "score": -0.014193901376958196,
+    "category": "process_end",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1751288,
+    "score": -0.01287178017390167,
+    "category": "process_end",
+    "host": "WIN-J23NIGGP1Q6.sysmon_set.local"
+   },
+   {
+    "row_id": 1611865,
+    "score": -0.00840418920551178,
+    "category": "process_end",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611867,
+    "score": -0.005646621001893726,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611712,
+    "score": -0.002702575670255336,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611853,
+    "score": -0.0023313117214472934,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611695,
+    "score": 0.003165113138266784,
+    "category": "process_end",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611693,
+    "score": 0.004492928837573018,
+    "category": "process_end",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611715,
+    "score": 0.006799026113656237,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611876,
+    "score": 0.008434472967226714,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   },
+   {
+    "row_id": 1611711,
+    "score": 0.00861952822423162,
+    "category": "process_create",
+    "host": "WINDOWS10EVAL.stefania.local"
+   }
+  ]
+ },
+ "seconds_total": 305.9
+}

@@ -1,0 +1,23 @@
+{
+  "f_distinct_dstip_300s": {
+    "net_benign_mean": 28.51,
+    "net_attack_mean": 6.73,
+    "net_auc_attack_pos": 0.1628,
+    "host_benign_mean": 29.18,
+    "host_attack_mean": 2.13
+  },
+  "f_host_out_degree_1h": {
+    "net_benign_mean": 322.87,
+    "net_attack_mean": 38.9,
+    "net_auc_attack_pos": 0.0178,
+    "host_benign_mean": 226.3,
+    "host_attack_mean": 7.01
+  },
+  "f_inbound_adminport_60s": {
+    "net_benign_mean": 0.06,
+    "net_attack_mean": 25.6,
+    "net_auc_attack_pos": 0.9299,
+    "host_benign_mean": 0.11,
+    "host_attack_mean": 0.7
+  }
+}

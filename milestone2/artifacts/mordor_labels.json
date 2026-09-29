@@ -1,0 +1,8 @@
+{
+  "seed_processes": 44,
+  "malicious_processes": 91,
+  "hosts_with_malicious": 4,
+  "attack_rows": 29549,
+  "rows": 783367,
+  "attack_rate": 0.03772050648035978
+}

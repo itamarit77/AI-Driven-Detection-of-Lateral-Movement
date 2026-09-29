@@ -1,0 +1,9 @@
+{
+  "group_number": "FILL: team identifier / group number (write 'none' if the course assigns none)",
+  "members": "FILL: Ela Ambar Grynbaum (student ID) — ela.ambar2306@gmail.com; Daniel Shostak (ID) — danshostak0@gmail.com; Itamar Tsafrir Ornstein (ID) — itamarit77@gmail.com; Itamar Klartag (ID) — itamarklartag@gmail.com",
+  "repo": "FILL: private GitHub/GitLab URL with instructor access, branch main",
+  "artifacts": "FILL: secure link to the models/ archive (.pkl, .pt)",
+  "hardware": "FILL: e.g. Windows 11 / Ubuntu 24.04, Intel i7-12700H (20 threads), 32 GB RAM, NVIDIA RTX 3070 8 GB (CUDA 12.4) — or 'CPU only'",
+  "llm_memory": "FILL: memory reported by `ollama ps` while the llm stage runs, e.g. 5.6 GB VRAM",
+  "date": "YYYY-MM-DD"
+}

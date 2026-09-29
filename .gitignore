@@ -1,0 +1,14 @@
+data/
+work/
+work_quick/
+results_quick/
+models_quick/
+__pycache__/
+*.pyc
+.venv/
+*.parquet
+.DS_Store
+*.zip
+overnight.log
+ollama_server.log
+nohup.out

@@ -1,0 +1,7 @@
+{
+  "n_rows": 1752836,
+  "attack_prevalence": 0.08056486744909393,
+  "label_entropy_bits": 0.4041664151225399,
+  "max_mi_bits": 0.29854681595838245,
+  "n_features": 42
+}

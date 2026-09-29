@@ -1,0 +1,34 @@
+{
+  "outbound_dest": {
+    "benign": {
+      "broadcast": 0.7455,
+      "unicast": 0.2229,
+      "multicast": 0.0316
+    },
+    "n_benign": 778177,
+    "attack": {
+      "unicast": 0.9294,
+      "multicast": 0.0425,
+      "loopback": 0.027,
+      "broadcast": 0.0012
+    },
+    "n_attack": 10434
+  },
+  "inbound_src": {
+    "benign": {
+      "broadcast": 0.9614,
+      "unicast": 0.0344,
+      "loopback": 0.0032,
+      "null": 0.001
+    },
+    "n_benign": 602168,
+    "attack": {
+      "unicast": 0.9263,
+      "multicast": 0.0659,
+      "null": 0.0064,
+      "broadcast": 0.0007,
+      "loopback": 0.0007
+    },
+    "n_attack": 17310
+  }
+}

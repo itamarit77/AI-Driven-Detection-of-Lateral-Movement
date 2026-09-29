@@ -1,0 +1,520 @@
+2026-09-27 14:07:30,120 m3 INFO args {'stage': 'all', 'quick': False, 'force': False, 'skip_llm': True, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-27 14:07:30,120 m3 INFO ==== stage ingest ====
+2026-09-27 14:07:30,120 m3.ingest INFO reading data/LMD-2023 [1.75M Elements][Labelled]checked.csv
+2026-09-27 14:07:41,787 m3.ingest INFO LMD rows 1752836  attack 141217  t=12s
+2026-09-27 14:07:42,746 m3.ingest INFO reading data/apt29_evals_day1_manual_2020-05-01225525.json
+2026-09-27 14:07:44,192 m3.ingest INFO reading data/apt29_evals_day2_manual_2020-05-02035409.json
+2026-09-27 14:07:50,947 m3.ingest INFO Mordor {'seed_processes': 44, 'malicious_processes': 91, 'attack_rows': 29549, 'rows': 783367, 'attack_rate': 0.03772050648035978}  t=8s
+2026-09-27 14:07:51,367 m3 INFO ==== stage ingest done in 21s ====
+2026-09-27 14:07:51,367 m3 INFO ==== stage features ====
+2026-09-27 14:08:24,881 m3 INFO features lmd: 1752836 rows x 42 features (33s)
+2026-09-27 14:08:36,835 m3 INFO features mordor: 783367 rows x 42 features (12s)
+2026-09-27 14:08:36,844 m3 INFO ==== stage features done in 45s ====
+2026-09-27 14:08:36,844 m3 INFO ==== stage train ====
+2026-09-27 14:09:40,087 m3.pipeline INFO lmd rf fold 0: F1 0.9836 FPR 0.0000 FNR 0.0319 AUC 0.999978382106237 thr 0.774 (60s)
+2026-09-27 14:10:41,455 m3.pipeline INFO lmd rf fold 1: F1 0.9939 FPR 0.0006 FNR 0.0057 AUC 0.9999904034065487 thr 0.675 (61s)
+2026-09-27 14:11:42,883 m3.pipeline INFO lmd rf fold 2: F1 0.9782 FPR 0.0039 FNR 0.0000 AUC 0.9999903492763058 thr 0.413 (61s)
+2026-09-27 14:12:39,895 m3.pipeline INFO lmd rf fold 3: F1 0.9955 FPR 0.0008 FNR 0.0003 AUC 0.9999959180369771 thr 0.482 (57s)
+2026-09-27 14:13:40,673 m3.pipeline INFO lmd rf fold 4: F1 0.9617 FPR 0.0066 FNR 0.0039 AUC 0.9998785684259943 thr 0.512 (61s)
+2026-09-27 14:14:45,005 m3.pipeline INFO lmd lgbm fold 0: F1 0.9890 FPR 0.0000 FNR 0.0217 AUC 0.9999966100393166 thr 0.964 (59s)
+2026-09-27 14:15:20,225 m3.pipeline INFO lmd lgbm fold 1: F1 0.9934 FPR 0.0004 FNR 0.0084 AUC 0.9999812603719551 thr 0.888 (35s)
+2026-09-27 14:15:32,770 m3.pipeline INFO lmd lgbm fold 2: F1 0.9926 FPR 0.0001 FNR 0.0137 AUC 0.9999847535837914 thr 0.965 (12s)
+2026-09-27 14:15:55,954 m3.pipeline INFO lmd lgbm fold 3: F1 0.9948 FPR 0.0007 FNR 0.0027 AUC 0.9999915256342895 thr 0.206 (23s)
+2026-09-27 14:16:29,242 m3.pipeline INFO lmd lgbm fold 4: F1 0.9475 FPR 0.0094 FNR 0.0028 AUC 0.9997948652257166 thr 0.110 (33s)
+2026-09-27 14:17:05,263 m3.pipeline INFO lmd if fold 0: F1 0.5912 FPR 0.1093 FNR 0.0566 AUC 0.9517159358504536 thr 0.814 (31s)
+2026-09-27 14:17:39,019 m3.pipeline INFO lmd if fold 1: F1 0.4539 FPR 0.0939 FNR 0.3918 AUC 0.9190013634789038 thr 0.863 (34s)
+2026-09-27 14:18:10,585 m3.pipeline INFO lmd if fold 2: F1 0.4769 FPR 0.1242 FNR 0.2428 AUC 0.9182391547840592 thr 0.826 (32s)
+2026-09-27 14:18:42,163 m3.pipeline INFO lmd if fold 3: F1 0.5550 FPR 0.1148 FNR 0.1132 AUC 0.9401273909157255 thr 0.829 (32s)
+2026-09-27 14:19:12,614 m3.pipeline INFO lmd if fold 4: F1 0.5606 FPR 0.1321 FNR 0.0236 AUC 0.9400849985980235 thr 0.807 (30s)
+2026-09-27 14:20:10,291 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.20709512166451655, 'val_auc': 0.9999846868867046}
+2026-09-27 14:20:58,389 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03267205806530745, 'val_auc': 0.9999914799781355}
+2026-09-27 14:21:46,139 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.021425742327678087, 'val_auc': 0.9999807595528472}
+2026-09-27 14:22:34,295 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.013086642790054356, 'val_auc': 0.9999880136574529}
+2026-09-27 14:22:43,718 m3.pipeline INFO lmd lstm fold 0: F1 0.9897 FPR 0.0001 FNR 0.0190 AUC 0.9946172098301798 (205s)
+2026-09-27 14:23:34,493 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.2074052025842187, 'val_auc': 0.9999791727651399}
+2026-09-27 14:24:22,853 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.0327901251283339, 'val_auc': 0.9999826428446664}
+2026-09-27 14:25:11,205 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.01822045266569513, 'val_auc': 0.9999919313048596}
+2026-09-27 14:25:59,635 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.011835508957784978, 'val_auc': 0.9999904682625664}
+2026-09-27 14:26:47,789 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.009741658883916164, 'val_auc': 0.9999964657223128}
+2026-09-27 14:27:36,458 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.008079545508365114, 'val_auc': 0.9999960298505904}
+2026-09-27 14:28:25,435 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.007892533288469988, 'val_auc': 0.999999043785291}
+2026-09-27 14:29:13,361 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.005849806847188575, 'val_auc': 0.9999982548236851}
+2026-09-27 14:29:22,761 m3.pipeline INFO lmd lstm fold 1: F1 0.9911 FPR 0.0013 FNR 0.0031 AUC 0.9999804100902405 (399s)
+2026-09-27 14:30:14,042 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.2000506487961285, 'val_auc': 0.9997940429662681}
+2026-09-27 14:31:01,241 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03494947310163931, 'val_auc': 0.9998517408515055}
+2026-09-27 14:31:49,450 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.020178006599648173, 'val_auc': 0.9998724729356978}
+2026-09-27 14:32:38,075 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.013895365639558274, 'val_auc': 0.9998684255049377}
+2026-09-27 14:33:26,498 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.011508095481672335, 'val_auc': 0.9999626178289425}
+2026-09-27 14:34:14,345 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.0085408913054246, 'val_auc': 0.999933030418755}
+2026-09-27 14:35:02,772 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.0081569808354291, 'val_auc': 0.999966030491835}
+2026-09-27 14:35:50,481 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.007356386018557657, 'val_auc': 0.99993446336008}
+2026-09-27 14:35:59,941 m3.pipeline INFO lmd lstm fold 2: F1 0.9892 FPR 0.0008 FNR 0.0119 AUC 0.9999333865638055 (397s)
+2026-09-27 14:36:51,219 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.19104183124703075, 'val_auc': 0.9987461994871345}
+2026-09-27 14:37:39,759 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03025797736597908, 'val_auc': 0.9973236853195544}
+2026-09-27 14:38:29,077 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.013967369112403226, 'val_auc': 0.9906356661610416}
+2026-09-27 14:38:38,490 m3.pipeline INFO lmd lstm fold 3: F1 0.9873 FPR 0.0022 FNR 0.0000 AUC 0.9999961971553128 (158s)
+2026-09-27 14:39:29,977 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.21167842837931955, 'val_auc': 0.9999979363242016}
+2026-09-27 14:40:18,846 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03356130675544381, 'val_auc': 0.9999882306335229}
+2026-09-27 14:41:06,712 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.01672710013506951, 'val_auc': 0.9999914820841377}
+2026-09-27 14:41:15,794 m3.pipeline INFO lmd lstm fold 4: F1 0.9430 FPR 0.0000 FNR 0.1074 AUC 0.9992080674048109 (157s)
+2026-09-27 14:41:41,847 m3.pipeline INFO mordor rf fold 0: F1 0.6835 FPR 0.0063 FNR 0.3403 AUC 0.9828033156164313 thr 0.585 (24s)
+2026-09-27 14:42:05,169 m3.pipeline INFO mordor rf fold 1: F1 0.7221 FPR 0.0010 FNR 0.4091 AUC 0.9550094794875393 thr 0.394 (23s)
+2026-09-27 14:42:27,001 m3.pipeline INFO mordor rf fold 2: F1 0.7492 FPR 0.0078 FNR 0.1938 AUC 0.9945227196961046 thr 0.483 (22s)
+2026-09-27 14:42:52,285 m3.pipeline INFO mordor rf fold 3: F1 0.6924 FPR 0.0102 FNR 0.2325 AUC 0.9829567923231461 thr 0.443 (25s)
+2026-09-27 14:43:15,043 m3.pipeline INFO mordor rf fold 4: F1 0.9452 FPR 0.0111 FNR 0.0087 AUC 0.9987599510762415 thr 0.491 (23s)
+2026-09-27 14:43:40,601 m3.pipeline INFO mordor-reduced rf fold 0: F1 0.0915 FPR 0.4620 FNR 0.0000 AUC 0.9290389354351869 thr 0.048 (24s)
+2026-09-27 14:44:02,601 m3.pipeline INFO mordor-reduced rf fold 1: F1 0.1601 FPR 0.0019 FNR 0.9057 AUC 0.8297406617901184 thr 0.470 (22s)
+2026-09-27 14:44:23,708 m3.pipeline INFO mordor-reduced rf fold 2: F1 0.0862 FPR 0.4727 FNR 0.0086 AUC 0.9215435222865187 thr 0.063 (21s)
+2026-09-27 14:44:48,039 m3.pipeline INFO mordor-reduced rf fold 3: F1 0.2486 FPR 0.0103 FNR 0.7935 AUC 0.9016941250026119 thr 0.673 (24s)
+2026-09-27 14:45:10,116 m3.pipeline INFO mordor-reduced rf fold 4: F1 0.0728 FPR 0.0052 FNR 0.9603 AUC 0.9125147712494855 thr 0.685 (22s)
+2026-09-27 14:45:15,314 m3.pipeline INFO mordor lgbm fold 0: F1 0.8191 FPR 0.0009 FNR 0.2807 AUC 0.9671260562133941 thr 0.254 (4s)
+2026-09-27 14:45:23,447 m3.pipeline INFO mordor lgbm fold 1: F1 0.7101 FPR 0.0028 FNR 0.3824 AUC 0.9308356397581183 thr 0.322 (8s)
+2026-09-27 14:45:50,065 m3.pipeline INFO mordor lgbm fold 2: F1 0.7195 FPR 0.0075 FNR 0.2516 AUC 0.993943620213755 thr 0.539 (27s)
+2026-09-27 14:46:04,272 m3.pipeline INFO mordor lgbm fold 3: F1 0.7054 FPR 0.0079 FNR 0.2647 AUC 0.9886378997100775 thr 0.719 (14s)
+2026-09-27 14:46:10,807 m3.pipeline INFO mordor lgbm fold 4: F1 0.9135 FPR 0.0193 FNR 0.0040 AUC 0.999483374405332 thr 0.443 (6s)
+2026-09-27 14:46:16,306 m3.pipeline INFO mordor-reduced lgbm fold 0: F1 0.1384 FPR 0.2700 FNR 0.0630 AUC 0.8905701622480223 thr 0.024 (4s)
+2026-09-27 14:46:20,289 m3.pipeline INFO mordor-reduced lgbm fold 1: F1 0.2601 FPR 0.0190 FNR 0.7261 AUC 0.7825623318279298 thr 0.228 (4s)
+2026-09-27 14:46:28,927 m3.pipeline INFO mordor-reduced lgbm fold 2: F1 0.1519 FPR 0.2005 FNR 0.1853 AUC 0.8495848532945695 thr 0.036 (9s)
+2026-09-27 14:46:32,520 m3.pipeline INFO mordor-reduced lgbm fold 3: F1 0.1810 FPR 0.1948 FNR 0.0459 AUC 0.8733011580165031 thr 0.044 (4s)
+2026-09-27 14:46:36,287 m3.pipeline INFO mordor-reduced lgbm fold 4: F1 0.0736 FPR 0.0470 FNR 0.9446 AUC 0.6615979378095633 thr 0.170 (4s)
+2026-09-27 14:46:46,893 m3.pipeline INFO mordor if fold 0: F1 0.1729 FPR 0.2035 FNR 0.0776 AUC 0.9304448515660813 thr 0.776 (9s)
+2026-09-27 14:46:56,313 m3.pipeline INFO mordor if fold 1: F1 0.2725 FPR 0.0214 FNR 0.6942 AUC 0.8029235529519905 thr 0.971 (9s)
+2026-09-27 14:47:10,830 m3.pipeline INFO mordor if fold 2: F1 0.1402 FPR 0.2633 FNR 0.0422 AUC 0.8747080857387787 thr 0.861 (14s)
+2026-09-27 14:47:19,059 m3.pipeline INFO mordor if fold 3: F1 0.2377 FPR 0.0357 FNR 0.6525 AUC 0.7720996707971611 thr 0.982 (8s)
+2026-09-27 14:47:28,941 m3.pipeline INFO mordor if fold 4: F1 0.0366 FPR 0.0178 FNR 0.9782 AUC 0.879151446081462 thr 0.984 (10s)
+2026-09-27 14:48:18,518 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6170470305064487, 'val_auc': 0.9852054389546936}
+2026-09-27 14:49:03,839 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.2209330813835109, 'val_auc': 0.9928121815354978}
+2026-09-27 14:49:49,878 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.13670406284365502, 'val_auc': 0.9937641229253695}
+2026-09-27 14:50:36,620 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.11080069125291456, 'val_auc': 0.9926924224478629}
+2026-09-27 14:51:22,359 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.09815070353797602, 'val_auc': 0.9938439162129638}
+2026-09-27 14:52:08,005 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.08720061829837564, 'val_auc': 0.9955082108475911}
+2026-09-27 14:52:53,951 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.07388942378229399, 'val_auc': 0.9945444412992365}
+2026-09-27 14:53:40,288 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.06992614728999702, 'val_auc': 0.9938970363441608}
+2026-09-27 14:53:47,122 m3.pipeline INFO mordor lstm fold 0: F1 0.5386 FPR 0.0120 FNR 0.4411 AUC 0.977977454521299 (376s)
+2026-09-27 14:54:32,134 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.4522684095738793, 'val_auc': 0.9502254486636974}
+2026-09-27 14:55:16,147 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.11885326357096107, 'val_auc': 0.9623659838323051}
+2026-09-27 14:56:00,601 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.07532136075041229, 'val_auc': 0.9305018158225953}
+2026-09-27 14:56:44,814 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.055724611359119394, 'val_auc': 0.9424119759385065}
+2026-09-27 14:56:52,412 m3.pipeline INFO mordor lstm fold 1: F1 0.6743 FPR 0.0009 FNR 0.4714 AUC 0.9615112073233402 (185s)
+2026-09-27 14:57:29,102 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6802624343381487, 'val_auc': 0.9777229581885893}
+2026-09-27 14:58:05,142 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.2851520326844445, 'val_auc': 0.9846538980043729}
+2026-09-27 14:58:41,591 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.15053474226327326, 'val_auc': 0.9813047753348618}
+2026-09-27 14:59:17,417 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.12006120671634056, 'val_auc': 0.976389237421867}
+2026-09-27 14:59:30,166 m3.pipeline INFO mordor lstm fold 2: F1 0.5930 FPR 0.0298 FNR 0.0223 AUC 0.9936171271250885 (158s)
+2026-09-27 15:00:17,115 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.4232322251365685, 'val_auc': 0.9819731007320478}
+2026-09-27 15:01:03,698 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.11178145422126265, 'val_auc': 0.9312923289668155}
+2026-09-27 15:01:50,047 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.07461013184428279, 'val_auc': 0.9021263812303575}
+2026-09-27 15:01:56,018 m3.pipeline INFO mordor lstm fold 3: F1 0.5138 FPR 0.0076 FNR 0.5386 AUC 0.9656297428104813 (146s)
+2026-09-27 15:02:39,898 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.5875065177058159, 'val_auc': 0.9480369277427385}
+2026-09-27 15:03:23,542 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.19025782140164724, 'val_auc': 0.901802073620436}
+2026-09-27 15:04:08,038 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.12432851931090398, 'val_auc': 0.8909211255635638}
+2026-09-27 15:04:16,007 m3.pipeline INFO mordor lstm fold 4: F1 0.9158 FPR 0.0178 FNR 0.0139 AUC 0.9935664542692773 (140s)
+2026-09-27 15:04:16,645 m3 INFO ==== stage train done in 3340s ====
+2026-09-27 15:04:16,645 m3 INFO ==== stage sensitivity ====
+2026-09-27 15:05:13,807 m3.pipeline INFO sens rf max_depth=4 F1 0.9763 AUC 0.9998329659334985
+2026-09-27 15:06:13,284 m3.pipeline INFO sens rf max_depth=8 F1 0.9804 AUC 0.9999512145170028
+2026-09-27 15:07:11,905 m3.pipeline INFO sens rf max_depth=12 F1 0.9836 AUC 0.999978382106237
+2026-09-27 15:08:06,844 m3.pipeline INFO sens rf max_depth=20 F1 0.9833 AUC 0.9999857350050121
+2026-09-27 15:08:28,646 m3.pipeline INFO sens rf n_estimators=100 F1 0.9832 AUC 0.9999820935495469
+2026-09-27 15:09:26,508 m3.pipeline INFO sens rf n_estimators=300 F1 0.9836 AUC 0.999978382106237
+2026-09-27 15:11:20,041 m3.pipeline INFO sens rf n_estimators=600 F1 0.9834 AUC 0.9999786755717515
+2026-09-27 15:12:14,678 m3.pipeline INFO sens rf min_samples_leaf=5 F1 0.9837 AUC 0.999973145762936
+2026-09-27 15:13:13,464 m3.pipeline INFO sens rf min_samples_leaf=20 F1 0.9836 AUC 0.999978382106237
+2026-09-27 15:14:12,433 m3.pipeline INFO sens rf min_samples_leaf=100 F1 0.9819 AUC 0.9999755226028746
+2026-09-27 15:14:56,932 m3.pipeline INFO sens lgbm num_leaves=7 F1 0.9842 AUC 0.9999886724069331
+2026-09-27 15:15:54,764 m3.pipeline INFO sens lgbm num_leaves=15 F1 0.9863 AUC 0.9999932842433135
+2026-09-27 15:16:53,084 m3.pipeline INFO sens lgbm num_leaves=31 F1 0.9890 AUC 0.9999966100393166
+2026-09-27 15:17:10,676 m3.pipeline INFO sens lgbm num_leaves=63 F1 0.9881 AUC 0.9999934676180583
+2026-09-27 15:17:28,128 m3.pipeline INFO sens lgbm num_leaves=127 F1 0.9881 AUC 0.999986971273814
+2026-09-27 15:18:32,331 m3.pipeline INFO sens lgbm learning_rate=0.02 F1 0.9892 AUC 0.9999973864978683
+2026-09-27 15:19:30,171 m3.pipeline INFO sens lgbm learning_rate=0.05 F1 0.9890 AUC 0.9999966100393166
+2026-09-27 15:20:11,695 m3.pipeline INFO sens lgbm learning_rate=0.1 F1 0.9888 AUC 0.9999953505877281
+2026-09-27 15:20:38,521 m3.pipeline INFO sens lgbm learning_rate=0.2 F1 0.9869 AUC 0.9999920523693528
+2026-09-27 15:20:53,895 m3.pipeline INFO sens lgbm min_child_samples=20 F1 0.9879 AUC 0.999988735582774
+2026-09-27 15:21:52,675 m3.pipeline INFO sens lgbm min_child_samples=100 F1 0.9890 AUC 0.9999966100393166
+2026-09-27 15:22:16,854 m3.pipeline INFO sens lgbm min_child_samples=500 F1 0.9872 AUC 0.9999924257111045
+2026-09-27 15:23:11,770 m3.pipeline INFO sens lgbm min_child_samples=2000 F1 0.9879 AUC 0.9999953633327674
+2026-09-27 15:23:36,767 m3.pipeline INFO sens if n_estimators=50 F1 0.6138 AUC 0.9598262765348715
+2026-09-27 15:24:00,653 m3.pipeline INFO sens if n_estimators=100 F1 0.5867 AUC 0.9535271441375381
+2026-09-27 15:24:33,057 m3.pipeline INFO sens if n_estimators=200 F1 0.5912 AUC 0.9517159358504536
+2026-09-27 15:25:14,879 m3.pipeline INFO sens if n_estimators=400 F1 0.6007 AUC 0.9551343462629391
+2026-09-27 15:25:41,806 m3.pipeline INFO sens if max_samples=256 F1 0.6494 AUC 0.9625327780639847
+2026-09-27 15:26:09,853 m3.pipeline INFO sens if max_samples=1024 F1 0.5992 AUC 0.9490325466258842
+2026-09-27 15:26:37,910 m3.pipeline INFO sens if max_samples=4096 F1 0.5912 AUC 0.9517159358504536
+2026-09-27 15:27:08,833 m3.pipeline INFO sens if max_samples=16384 F1 0.5783 AUC 0.9510167437694201
+2026-09-27 15:27:43,604 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.24546356630950497, 'val_auc': 0.9999550026221682}
+2026-09-27 15:28:10,648 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.0382899922477086, 'val_auc': 0.9999875950076509}
+2026-09-27 15:28:37,225 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.019323729917776623, 'val_auc': 0.9999828478179313}
+2026-09-27 15:29:03,337 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.014303558903272413, 'val_auc': 0.9999905355241179}
+2026-09-27 15:29:30,615 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.011933680361008496, 'val_auc': 0.9999854706091018}
+2026-09-27 15:29:57,584 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.009976488054540515, 'val_auc': 0.9999887039312338}
+2026-09-27 15:30:04,084 m3.pipeline INFO sens lstm hidden=16 F1 0.9878 AUC 0.9929918472174062
+2026-09-27 15:30:40,707 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.2254962360195189, 'val_auc': 0.9999574111045115}
+2026-09-27 15:31:17,021 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03848778118912661, 'val_auc': 0.9999795584266293}
+2026-09-27 15:31:55,029 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.01938644924341486, 'val_auc': 0.9999712178261086}
+2026-09-27 15:32:31,249 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.013754255927189934, 'val_auc': 0.9999766216481072}
+2026-09-27 15:32:38,533 m3.pipeline INFO sens lstm hidden=32 F1 0.9857 AUC 0.9971084389708385
+2026-09-27 15:33:28,639 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.20709512166451655, 'val_auc': 0.9999846868867046}
+2026-09-27 15:34:18,063 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03267205806530745, 'val_auc': 0.9999914799781355}
+2026-09-27 15:35:06,148 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.021425742327678087, 'val_auc': 0.9999807595528472}
+2026-09-27 15:35:54,510 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.013086642790054356, 'val_auc': 0.9999880136574529}
+2026-09-27 15:36:03,876 m3.pipeline INFO sens lstm hidden=64 F1 0.9897 AUC 0.9946172098301798
+2026-09-27 15:37:16,636 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.15714080434498975, 'val_auc': 0.9999900670350536}
+2026-09-27 15:38:28,951 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.02922783691054863, 'val_auc': 0.9999833337507371}
+2026-09-27 15:39:41,823 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.017492614082798053, 'val_auc': 0.9999777542453395}
+2026-09-27 15:39:53,920 m3.pipeline INFO sens lstm hidden=128 F1 0.9873 AUC 0.9907182645429202
+2026-09-27 15:40:22,253 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.2058503830292048, 'val_auc': 0.9999742829407308}
+2026-09-27 15:40:49,810 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03399817852876032, 'val_auc': 0.9999833736221468}
+2026-09-27 15:41:17,366 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.019669708212011517, 'val_auc': 0.9999809464500803}
+2026-09-27 15:41:45,034 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.01407214054460393, 'val_auc': 0.999979458748105}
+2026-09-27 15:41:51,163 m3.pipeline INFO sens lstm T=10 F1 0.9850 AUC 0.9956257897355957
+2026-09-27 15:42:40,449 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.20709512166451655, 'val_auc': 0.9999846868867046}
+2026-09-27 15:43:30,030 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03267205806530745, 'val_auc': 0.9999914799781355}
+2026-09-27 15:44:20,959 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.021425742327678087, 'val_auc': 0.9999807595528472}
+2026-09-27 15:45:12,239 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.013086642790054356, 'val_auc': 0.9999880136574529}
+2026-09-27 15:45:22,197 m3.pipeline INFO sens lstm T=20 F1 0.9897 AUC 0.9946172098301798
+2026-09-27 15:47:03,356 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.20208501694994702, 'val_auc': 0.9999533504506278}
+2026-09-27 15:48:44,947 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03418326661929016, 'val_auc': 0.9999853522408543}
+2026-09-27 15:50:26,347 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.01595435285858003, 'val_auc': 0.9999912457336034}
+2026-09-27 15:52:08,810 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.014407339227285576, 'val_auc': 0.9999969149496729}
+2026-09-27 15:53:49,851 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.010341061937530326, 'val_auc': 0.9999954945307017}
+2026-09-27 15:55:29,454 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.006464893807572974, 'val_auc': 0.9999950509612685}
+2026-09-27 15:55:44,992 m3.pipeline INFO sens lstm T=40 F1 0.9916 AUC 0.9974773062712856
+2026-09-27 15:56:35,133 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.19646407055496043, 'val_auc': 0.999947858163939}
+2026-09-27 15:57:24,757 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.030193120759205657, 'val_auc': 0.9999859328682582}
+2026-09-27 15:58:14,052 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.017200509682974107, 'val_auc': 0.9999774277981726}
+2026-09-27 15:59:02,128 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.012293686171641735, 'val_auc': 0.9999801103964576}
+2026-09-27 15:59:12,113 m3.pipeline INFO sens lstm dropout=0.1 F1 0.9889 AUC 0.9949307136523137
+2026-09-27 16:00:02,477 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.20709512166451655, 'val_auc': 0.9999846868867046}
+2026-09-27 16:00:51,317 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.03267205806530745, 'val_auc': 0.9999914799781355}
+2026-09-27 16:01:40,107 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.021425742327678087, 'val_auc': 0.9999807595528472}
+2026-09-27 16:02:28,258 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.013086642790054356, 'val_auc': 0.9999880136574529}
+2026-09-27 16:02:37,594 m3.pipeline INFO sens lstm dropout=0.3 F1 0.9897 AUC 0.9946172098301798
+2026-09-27 16:03:28,619 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.22439258990981564, 'val_auc': 0.9999734294433664}
+2026-09-27 16:04:20,298 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.037025244965631865, 'val_auc': 0.9999915223415083}
+2026-09-27 16:05:13,175 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.020268086239391123, 'val_auc': 0.9999804430735325}
+2026-09-27 16:06:03,291 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.015066793407056063, 'val_auc': 0.9999889506355814}
+2026-09-27 16:06:12,971 m3.pipeline INFO sens lstm dropout=0.5 F1 0.9903 AUC 0.9961315116538646
+2026-09-27 16:06:34,315 m3.pipeline INFO sens rf max_depth=4 F1 0.7978 AUC 0.9815476849905311
+2026-09-27 16:06:58,178 m3.pipeline INFO sens rf max_depth=8 F1 0.7880 AUC 0.984131336800693
+2026-09-27 16:07:22,695 m3.pipeline INFO sens rf max_depth=12 F1 0.6835 AUC 0.9828033156164313
+2026-09-27 16:07:46,593 m3.pipeline INFO sens rf max_depth=20 F1 0.8232 AUC 0.9872289715092334
+2026-09-27 16:07:56,911 m3.pipeline INFO sens rf n_estimators=100 F1 0.8087 AUC 0.9831981518773234
+2026-09-27 16:08:21,602 m3.pipeline INFO sens rf n_estimators=300 F1 0.6835 AUC 0.9828033156164313
+2026-09-27 16:09:07,513 m3.pipeline INFO sens rf n_estimators=600 F1 0.6996 AUC 0.983544824267797
+2026-09-27 16:09:31,549 m3.pipeline INFO sens rf min_samples_leaf=5 F1 0.7444 AUC 0.9837150619976527
+2026-09-27 16:09:55,825 m3.pipeline INFO sens rf min_samples_leaf=20 F1 0.6835 AUC 0.9828033156164313
+2026-09-27 16:10:19,833 m3.pipeline INFO sens rf min_samples_leaf=100 F1 0.8506 AUC 0.9861093119513148
+2026-09-27 16:10:26,112 m3.pipeline INFO sens lgbm num_leaves=7 F1 0.7915 AUC 0.993084809010821
+2026-09-27 16:10:29,425 m3.pipeline INFO sens lgbm num_leaves=15 F1 0.7652 AUC 0.9755955093410471
+2026-09-27 16:10:33,288 m3.pipeline INFO sens lgbm num_leaves=31 F1 0.8191 AUC 0.9671260562133941
+2026-09-27 16:10:40,459 m3.pipeline INFO sens lgbm num_leaves=63 F1 0.7843 AUC 0.9900986802660516
+2026-09-27 16:10:49,610 m3.pipeline INFO sens lgbm num_leaves=127 F1 0.8267 AUC 0.9888706765981952
+2026-09-27 16:10:56,138 m3.pipeline INFO sens lgbm learning_rate=0.02 F1 0.8214 AUC 0.9894745159387217
+2026-09-27 16:11:01,229 m3.pipeline INFO sens lgbm learning_rate=0.05 F1 0.8191 AUC 0.9671260562133941
+2026-09-27 16:11:03,755 m3.pipeline INFO sens lgbm learning_rate=0.1 F1 0.8818 AUC 0.9706864691963873
+2026-09-27 16:11:05,741 m3.pipeline INFO sens lgbm learning_rate=0.2 F1 0.8149 AUC 0.9513672026271928
+2026-09-27 16:11:12,462 m3.pipeline INFO sens lgbm min_child_samples=20 F1 0.8679 AUC 0.9908858664467606
+2026-09-27 16:11:15,795 m3.pipeline INFO sens lgbm min_child_samples=100 F1 0.8191 AUC 0.9671260562133941
+2026-09-27 16:11:25,048 m3.pipeline INFO sens lgbm min_child_samples=500 F1 0.8947 AUC 0.9894099495967575
+2026-09-27 16:11:48,250 m3.pipeline INFO sens lgbm min_child_samples=2000 F1 0.7464 AUC 0.9826549421720586
+2026-09-27 16:11:53,924 m3.pipeline INFO sens if n_estimators=50 F1 0.1236 AUC 0.914020878089838
+2026-09-27 16:11:59,652 m3.pipeline INFO sens if n_estimators=100 F1 0.1023 AUC 0.911616165257199
+2026-09-27 16:12:08,043 m3.pipeline INFO sens if n_estimators=200 F1 0.1729 AUC 0.9304448515660813
+2026-09-27 16:12:21,559 m3.pipeline INFO sens if n_estimators=400 F1 0.2310 AUC 0.9425085869781562
+2026-09-27 16:12:28,964 m3.pipeline INFO sens if max_samples=256 F1 0.1731 AUC 0.9463547674023383
+2026-09-27 16:12:36,570 m3.pipeline INFO sens if max_samples=1024 F1 0.2865 AUC 0.9571226006534256
+2026-09-27 16:12:45,161 m3.pipeline INFO sens if max_samples=4096 F1 0.1729 AUC 0.9304448515660813
+2026-09-27 16:12:54,529 m3.pipeline INFO sens if max_samples=16384 F1 0.1947 AUC 0.9269193325068086
+2026-09-27 16:13:23,828 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.7125297890021287, 'val_auc': 0.9700342351068856}
+2026-09-27 16:13:50,274 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.26393886394703353, 'val_auc': 0.9932178748419741}
+2026-09-27 16:14:17,030 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.1598061450674609, 'val_auc': 0.9959819213537623}
+2026-09-27 16:14:44,838 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.1323004314995076, 'val_auc': 0.9963463291963472}
+2026-09-27 16:15:11,938 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.11676602563954729, 'val_auc': 0.997089158377301}
+2026-09-27 16:15:38,941 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.1056019584588131, 'val_auc': 0.9970011981441262}
+2026-09-27 16:16:05,762 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.09770263008918424, 'val_auc': 0.996865015669015}
+2026-09-27 16:16:10,055 m3.pipeline INFO sens lstm hidden=16 F1 0.6241 AUC 0.9764088787598253
+2026-09-27 16:16:38,525 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6676695054879205, 'val_auc': 0.9662099192378739}
+2026-09-27 16:17:12,792 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.2456996711044767, 'val_auc': 0.994107562594862}
+2026-09-27 16:17:46,609 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.14733566242260132, 'val_auc': 0.9972725021562102}
+2026-09-27 16:18:20,585 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.1175265083650006, 'val_auc': 0.9973939616738375}
+2026-09-27 16:18:54,408 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.10185846269395167, 'val_auc': 0.9981273839784411}
+2026-09-27 16:19:28,458 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.09657529558222998, 'val_auc': 0.9973208562018115}
+2026-09-27 16:20:02,460 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.08777063258835788, 'val_auc': 0.9980656250120005}
+2026-09-27 16:20:07,624 m3.pipeline INFO sens lstm hidden=32 F1 0.5105 AUC 0.9794321989971402
+2026-09-27 16:20:52,454 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6170470305064487, 'val_auc': 0.9852054389546936}
+2026-09-27 16:21:39,350 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.2209330813835109, 'val_auc': 0.9928121815354978}
+2026-09-27 16:22:28,016 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.13670406284365502, 'val_auc': 0.9937641229253695}
+2026-09-27 16:23:16,899 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.11080069125291456, 'val_auc': 0.9926924224478629}
+2026-09-27 16:24:05,732 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.09815070353797602, 'val_auc': 0.9938439162129638}
+2026-09-27 16:24:53,853 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.08720061829837564, 'val_auc': 0.9955082108475911}
+2026-09-27 16:25:42,463 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.07388942378229399, 'val_auc': 0.9945444412992365}
+2026-09-27 16:26:30,920 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.06992614728999702, 'val_auc': 0.9938970363441608}
+2026-09-27 16:26:38,313 m3.pipeline INFO sens lstm hidden=64 F1 0.5386 AUC 0.977977454521299
+2026-09-27 16:27:50,253 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.5523404163822552, 'val_auc': 0.9880576588636076}
+2026-09-27 16:29:01,946 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.19339343426048802, 'val_auc': 0.9938852521202327}
+2026-09-27 16:30:14,166 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.12869482988094633, 'val_auc': 0.9948006692501921}
+2026-09-27 16:31:24,431 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.10107881949483358, 'val_auc': 0.9942870173520663}
+2026-09-27 16:32:34,214 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.08923570990037069, 'val_auc': 0.9960327910594288}
+2026-09-27 16:33:45,969 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.07991313710866438, 'val_auc': 0.9963686105244673}
+2026-09-27 16:34:57,520 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.06888309477265302, 'val_auc': 0.9971413689004925}
+2026-09-27 16:36:09,151 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.0617325659267785, 'val_auc': 0.9965202481996434}
+2026-09-27 16:36:18,512 m3.pipeline INFO sens lstm hidden=128 F1 0.7095 AUC 0.9800140535243775
+2026-09-27 16:36:45,343 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6243271488141903, 'val_auc': 0.9850494224688864}
+2026-09-27 16:37:12,116 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.23263462513931937, 'val_auc': 0.9937897009723076}
+2026-09-27 16:37:39,200 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.14989998611314223, 'val_auc': 0.9940190165676229}
+2026-09-27 16:38:06,549 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.12200586986102638, 'val_auc': 0.995187615519403}
+2026-09-27 16:38:33,075 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.10661877305172843, 'val_auc': 0.9950197936559934}
+2026-09-27 16:39:00,657 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.09625674667661409, 'val_auc': 0.9950615998257197}
+2026-09-27 16:39:05,375 m3.pipeline INFO sens lstm T=10 F1 0.4945 AUC 0.9737352382131509
+2026-09-27 16:39:51,784 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6170470305064487, 'val_auc': 0.9852054389546936}
+2026-09-27 16:40:38,187 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.2209330813835109, 'val_auc': 0.9928121815354978}
+2026-09-27 16:41:26,617 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.13670406284365502, 'val_auc': 0.9937641229253695}
+2026-09-27 16:42:13,775 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.11080069125291456, 'val_auc': 0.9926924224478629}
+2026-09-27 16:43:00,862 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.09815070353797602, 'val_auc': 0.9938439162129638}
+2026-09-27 16:43:48,996 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.08720061829837564, 'val_auc': 0.9955082108475911}
+2026-09-27 16:44:37,222 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.07388942378229399, 'val_auc': 0.9945444412992365}
+2026-09-27 16:45:25,095 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.06992614728999702, 'val_auc': 0.9938970363441608}
+2026-09-27 16:45:32,452 m3.pipeline INFO sens lstm T=20 F1 0.5386 AUC 0.977977454521299
+2026-09-27 16:47:10,519 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6128904583302769, 'val_auc': 0.978042183160751}
+2026-09-27 16:48:40,589 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.211812986499266, 'val_auc': 0.9935556925156542}
+2026-09-27 16:50:12,185 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.13100851537639463, 'val_auc': 0.9952975739469}
+2026-09-27 16:51:40,564 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.11088836438198213, 'val_auc': 0.9972314916900881}
+2026-09-27 16:53:10,034 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.09558014491796281, 'val_auc': 0.995777728187779}
+2026-09-27 16:54:39,296 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.0841236197016989, 'val_auc': 0.9970188728528125}
+2026-09-27 16:54:50,482 m3.pipeline INFO sens lstm T=40 F1 0.5296 AUC 0.9721615809350421
+2026-09-27 16:55:34,283 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.5527776508296937, 'val_auc': 0.9895415923874369}
+2026-09-27 16:56:18,210 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.17087503967468468, 'val_auc': 0.9942197291405406}
+2026-09-27 16:57:02,037 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.11583314483352886, 'val_auc': 0.9952475406249812}
+2026-09-27 16:57:46,308 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.09543392783062261, 'val_auc': 0.9959716048694066}
+2026-09-27 16:58:31,004 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.08539697121966128, 'val_auc': 0.9950245548599721}
+2026-09-27 16:59:15,002 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.07506483203193627, 'val_auc': 0.9967214782239843}
+2026-09-27 16:59:59,019 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.06280552217134817, 'val_auc': 0.9953885721731807}
+2026-09-27 17:00:43,644 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.06175607754439284, 'val_auc': 0.9962681452152243}
+2026-09-27 17:00:51,065 m3.pipeline INFO sens lstm dropout=0.1 F1 0.6271 AUC 0.9824733254152247
+2026-09-27 17:01:39,765 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6170470305064487, 'val_auc': 0.9852054389546936}
+2026-09-27 17:02:27,717 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.2209330813835109, 'val_auc': 0.9928121815354978}
+2026-09-27 17:03:16,050 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.13670406284365502, 'val_auc': 0.9937641229253695}
+2026-09-27 17:04:03,924 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.11080069125291456, 'val_auc': 0.9926924224478629}
+2026-09-27 17:04:51,467 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.09815070353797602, 'val_auc': 0.9938439162129638}
+2026-09-27 17:05:39,579 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.08720061829837564, 'val_auc': 0.9955082108475911}
+2026-09-27 17:06:27,213 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.07388942378229399, 'val_auc': 0.9945444412992365}
+2026-09-27 17:07:16,674 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.06992614728999702, 'val_auc': 0.9938970363441608}
+2026-09-27 17:07:24,202 m3.pipeline INFO sens lstm dropout=0.3 F1 0.5386 AUC 0.977977454521299
+2026-09-27 17:08:13,583 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.6874456402444831, 'val_auc': 0.9627718043778472}
+2026-09-27 17:09:02,674 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.29328095846552144, 'val_auc': 0.9909115434039881}
+2026-09-27 17:09:51,715 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.17185165454928, 'val_auc': 0.9925029652570097}
+2026-09-27 17:10:41,126 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.13306416169835716, 'val_auc': 0.9931650687614836}
+2026-09-27 17:11:30,431 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.1182493031704719, 'val_auc': 0.9939785186713072}
+2026-09-27 17:12:16,713 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.10453715028473012, 'val_auc': 0.9943828142080575}
+2026-09-27 17:13:03,039 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.09078924036456947, 'val_auc': 0.9958426797318704}
+2026-09-27 17:13:49,416 m3.models INFO lstm epoch {'epoch': 8, 'train_loss': 0.08533429348261472, 'val_auc': 0.9954084956801919}
+2026-09-27 17:13:56,639 m3.pipeline INFO sens lstm dropout=0.5 F1 0.5008 AUC 0.9774641871861014
+2026-09-27 17:13:56,641 m3 INFO ==== stage sensitivity done in 7780s ====
+2026-09-27 17:13:56,641 m3 INFO ==== stage cross ====
+2026-09-27 17:15:45,474 m3 INFO cross lmd->mordor rf unified raw: F1 0.0270 AUC 0.33693523079196463
+2026-09-27 17:17:31,811 m3 INFO cross lmd->mordor rf unified quantile: F1 0.0000 AUC 0.32574986032449704
+2026-09-27 17:19:16,961 m3 INFO cross lmd->mordor rf reduced raw: F1 0.0364 AUC 0.4149410110209471
+2026-09-27 17:21:03,154 m3 INFO cross lmd->mordor rf reduced quantile: F1 0.0000 AUC 0.321248421300814
+2026-09-27 17:21:52,588 m3 INFO cross lmd->mordor lgbm unified raw: F1 0.0351 AUC 0.5114847298523703
+2026-09-27 17:22:28,501 m3 INFO cross lmd->mordor lgbm unified quantile: F1 0.0001 AUC 0.40965485354904757
+2026-09-27 17:23:16,049 m3 INFO cross lmd->mordor lgbm reduced raw: F1 0.0376 AUC 0.4018838942935064
+2026-09-27 17:23:53,248 m3 INFO cross lmd->mordor lgbm reduced quantile: F1 0.0000 AUC 0.4161018874026938
+2026-09-27 17:25:04,427 m3 INFO cross lmd->mordor if unified raw: F1 0.0727 AUC 0.7236326725690986
+2026-09-27 17:26:23,867 m3 INFO cross lmd->mordor if unified quantile: F1 0.0750 AUC 0.7731385663058712
+2026-09-27 17:27:32,243 m3 INFO cross lmd->mordor if reduced raw: F1 0.0727 AUC 0.3830557796716608
+2026-09-27 17:28:46,045 m3 INFO cross lmd->mordor if reduced quantile: F1 0.0727 AUC 0.3938579203513015
+2026-09-27 17:29:51,253 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.1678829506158377, 'val_auc': 0.9970596026652832}
+2026-09-27 17:30:51,525 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.021622578470351442, 'val_auc': 0.9985920335582175}
+2026-09-27 17:31:51,468 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.011578782602443202, 'val_auc': 0.9974049012882739}
+2026-09-27 17:32:51,513 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.008611879971901264, 'val_auc': 0.9947747794291992}
+2026-09-27 17:33:51,393 m3 INFO cross lmd->mordor lstm unified raw: F1 0.0102 AUC 0.558854819365884
+2026-09-27 17:35:00,037 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.17257562147043434, 'val_auc': 0.9979411862808405}
+2026-09-27 17:36:00,011 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.027112916851393814, 'val_auc': 0.9976262970265339}
+2026-09-27 17:37:01,318 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.013269941928122484, 'val_auc': 0.9976497351315453}
+2026-09-27 17:37:43,916 m3 INFO cross lmd->mordor lstm unified quantile: F1 0.0367 AUC 0.26310121338772097
+2026-09-27 17:39:46,612 m3 INFO cross mordor->lmd rf unified raw: F1 0.0103 AUC 0.34917340839682665
+2026-09-27 17:42:13,094 m3 INFO cross mordor->lmd rf unified quantile: F1 0.0012 AUC 0.4882674526942968
+2026-09-27 17:44:17,513 m3 INFO cross mordor->lmd rf reduced raw: F1 0.0023 AUC 0.12492938321725139
+2026-09-27 17:46:46,035 m3 INFO cross mordor->lmd rf reduced quantile: F1 0.0000 AUC 0.18414937376539955
+2026-09-27 17:49:00,419 m3 INFO cross mordor->lmd lgbm unified raw: F1 0.0384 AUC 0.6686928282774672
+2026-09-27 17:51:34,057 m3 INFO cross mordor->lmd lgbm unified quantile: F1 0.0010 AUC 0.2988310242828162
+2026-09-27 17:51:55,274 m3 INFO cross mordor->lmd lgbm reduced raw: F1 0.0326 AUC 0.15377365593893838
+2026-09-27 17:52:44,926 m3 INFO cross mordor->lmd lgbm reduced quantile: F1 0.0000 AUC 0.11736844855216438
+2026-09-27 17:54:34,311 m3 INFO cross mordor->lmd if unified raw: F1 0.1491 AUC 0.2360717313797249
+2026-09-27 17:56:38,260 m3 INFO cross mordor->lmd if unified quantile: F1 0.1564 AUC 0.6285592286630901
+2026-09-27 17:58:32,439 m3 INFO cross mordor->lmd if reduced raw: F1 0.1491 AUC 0.25876712892559456
+2026-09-27 18:00:31,091 m3 INFO cross mordor->lmd if reduced quantile: F1 0.1908 AUC 0.5741970766034867
+2026-09-27 18:01:30,602 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.4430746943663762, 'val_auc': 0.9872678741068835}
+2026-09-27 18:02:26,734 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.12661900642501883, 'val_auc': 0.9917295448999983}
+2026-09-27 18:03:23,842 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.08899743965524842, 'val_auc': 0.9927535743994735}
+2026-09-27 18:04:20,498 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.07388124603076802, 'val_auc': 0.9919917753477712}
+2026-09-27 18:05:17,138 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.06361912746064807, 'val_auc': 0.9909920580229474}
+2026-09-27 18:06:06,734 m3 INFO cross mordor->lmd lstm unified raw: F1 0.0001 AUC 0.11734307268375078
+2026-09-27 18:07:06,955 m3.models INFO lstm epoch {'epoch': 1, 'train_loss': 0.4166834741375358, 'val_auc': 0.9839016399379239}
+2026-09-27 18:08:04,319 m3.models INFO lstm epoch {'epoch': 2, 'train_loss': 0.12970909778502449, 'val_auc': 0.9899308570894161}
+2026-09-27 18:09:00,707 m3.models INFO lstm epoch {'epoch': 3, 'train_loss': 0.10038505850968563, 'val_auc': 0.9917067093867145}
+2026-09-27 18:09:57,490 m3.models INFO lstm epoch {'epoch': 4, 'train_loss': 0.08587779004424288, 'val_auc': 0.9932908330268675}
+2026-09-27 18:10:54,466 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.07509182258030389, 'val_auc': 0.9949187994461817}
+2026-09-27 18:11:50,748 m3.models INFO lstm epoch {'epoch': 6, 'train_loss': 0.06501975109818581, 'val_auc': 0.9943373552432377}
+2026-09-27 18:12:47,611 m3.models INFO lstm epoch {'epoch': 7, 'train_loss': 0.06241093995351677, 'val_auc': 0.9939241273810285}
+2026-09-27 18:13:36,910 m3 INFO cross mordor->lmd lstm unified quantile: F1 0.0034 AUC 0.1735147687931639
+2026-09-27 18:13:36,923 m3 INFO ==== stage cross done in 3580s ====
+2026-09-27 18:13:36,923 m3 INFO ==== stage cascade ====
+2026-09-27 18:13:39,177 m3 INFO cascade lmd: ambiguous 0.000 disputed 0.000 | S1 F1 0.9830 -> S2 F1 0.9830 | escalated 50
+2026-09-27 18:13:39,862 m3 INFO cascade mordor: ambiguous 0.007 disputed 0.002 | S1 F1 0.8369 -> S2 F1 0.8514 | escalated 150
+2026-09-27 18:13:39,863 m3 INFO ==== stage cascade done in 3s ====
+2026-09-27 18:13:39,863 m3 INFO skipping llm stage
+2026-09-27 18:13:39,863 m3 INFO ==== stage collect ====
+2026-09-27 18:13:44,050 m3.collect INFO wrote results/m3_results.json
+2026-09-27 18:13:44,050 m3 INFO ==== stage collect done in 4s ====
+2026-09-27 18:13:49,373 m3 INFO args {'stage': 'all', 'quick': False, 'force': False, 'skip_llm': True, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-27 18:13:49,373 m3 INFO ==== stage ingest ====
+2026-09-27 18:13:49,373 m3 INFO skip ingest lmd (exists)
+2026-09-27 18:13:49,373 m3 INFO skip ingest mordor (exists)
+2026-09-27 18:13:49,373 m3 INFO ==== stage ingest done in 0s ====
+2026-09-27 18:13:49,373 m3 INFO ==== stage features ====
+2026-09-27 18:13:49,373 m3 INFO skip features lmd (exists)
+2026-09-27 18:13:49,373 m3 INFO skip features mordor (exists)
+2026-09-27 18:13:49,373 m3 INFO ==== stage features done in 0s ====
+2026-09-27 18:13:49,373 m3 INFO ==== stage train ====
+2026-09-27 18:13:49,772 m3 INFO skip train lmd rf (exists)
+2026-09-27 18:13:49,772 m3 INFO skip train lmd lgbm (exists)
+2026-09-27 18:13:49,772 m3 INFO skip train lmd if (exists)
+2026-09-27 18:13:49,772 m3 INFO skip train lmd lstm (exists)
+2026-09-27 18:13:49,869 m3 INFO skip train mordor rf (exists)
+2026-09-27 18:13:49,869 m3 INFO skip train mordor lgbm (exists)
+2026-09-27 18:13:49,869 m3 INFO skip train mordor if (exists)
+2026-09-27 18:13:49,869 m3 INFO skip train mordor lstm (exists)
+2026-09-27 18:13:49,869 m3 INFO ==== stage train done in 0s ====
+2026-09-27 18:13:49,869 m3 INFO ==== stage sensitivity ====
+2026-09-27 18:13:50,214 m3 INFO skip sensitivity lmd rf
+2026-09-27 18:13:50,214 m3 INFO skip sensitivity lmd lgbm
+2026-09-27 18:13:50,214 m3 INFO skip sensitivity lmd if
+2026-09-27 18:13:50,214 m3 INFO skip sensitivity lmd lstm
+2026-09-27 18:13:50,304 m3 INFO skip sensitivity mordor rf
+2026-09-27 18:13:50,304 m3 INFO skip sensitivity mordor lgbm
+2026-09-27 18:13:50,304 m3 INFO skip sensitivity mordor if
+2026-09-27 18:13:50,304 m3 INFO skip sensitivity mordor lstm
+2026-09-27 18:13:50,304 m3 INFO ==== stage sensitivity done in 0s ====
+2026-09-27 18:13:50,304 m3 INFO ==== stage cross ====
+2026-09-27 18:13:50,761 m3 INFO ==== stage cross done in 0s ====
+2026-09-27 18:13:50,761 m3 INFO ==== stage cascade ====
+2026-09-27 18:13:50,761 m3 INFO ==== stage cascade done in 0s ====
+2026-09-27 18:13:50,761 m3 INFO skipping llm stage
+2026-09-27 18:13:50,761 m3 INFO ==== stage collect ====
+2026-09-27 18:13:51,734 m3.collect INFO wrote results/m3_results.json
+2026-09-27 18:13:51,735 m3 INFO ==== stage collect done in 1s ====
+2026-09-27 18:13:53,427 m3 INFO args {'stage': 'collect', 'quick': False, 'force': False, 'skip_llm': False, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-27 18:13:53,427 m3 INFO ==== stage collect ====
+2026-09-27 18:13:54,387 m3.collect INFO wrote results/m3_results.json
+2026-09-27 18:13:54,387 m3 INFO ==== stage collect done in 1s ====
+2026-09-28 11:45:27,687 m3 INFO args {'stage': 'llm', 'quick': False, 'force': False, 'skip_llm': False, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 11:45:27,687 m3 INFO ==== stage llm ====
+2026-09-28 11:49:29,909 m3 INFO args {'stage': 'llm', 'quick': False, 'force': False, 'skip_llm': False, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 11:49:29,909 m3 INFO ==== stage llm ====
+2026-09-28 11:53:46,468 m3 INFO llm lmd 10/50
+2026-09-28 11:58:20,216 m3 INFO llm lmd 20/50
+2026-09-28 12:02:48,496 m3 INFO llm lmd 30/50
+2026-09-28 12:07:06,960 m3 INFO llm lmd 40/50
+2026-09-28 12:11:34,029 m3 INFO llm lmd 50/50
+2026-09-28 13:22:53,402 m3 INFO llm lmd: S2 F1 0.9830 -> S3 F1 0.9830 (LLM on disputed: acc-F1 0.8450704225352113)
+2026-09-28 13:27:01,727 m3 INFO llm mordor 10/150
+2026-09-28 13:31:18,649 m3 INFO llm mordor 20/150
+2026-09-28 13:35:32,192 m3 INFO llm mordor 30/150
+2026-09-28 13:39:52,605 m3 INFO llm mordor 40/150
+2026-09-28 13:43:51,779 m3 INFO llm mordor 50/150
+2026-09-28 13:48:08,014 m3 INFO llm mordor 60/150
+2026-09-28 13:52:08,197 m3 INFO llm mordor 70/150
+2026-09-28 13:52:54,592 m3 INFO args {'stage': 'train', 'quick': False, 'force': True, 'skip_llm': False, 'models': ('lgbm',), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 13:52:54,592 m3 INFO ==== stage train ====
+2026-09-28 13:54:05,980 m3.pipeline INFO lmd lgbm fold 0: F1 0.9887 FPR 0.0000 FNR 0.0224 AUC 0.9999960275031288 thr 0.977 (68s)
+2026-09-28 13:54:46,332 m3.pipeline INFO lmd lgbm fold 1: F1 0.9935 FPR 0.0004 FNR 0.0083 AUC 0.9999811239087524 thr 0.895 (40s)
+2026-09-28 13:54:57,875 m3.pipeline INFO lmd lgbm fold 2: F1 0.9926 FPR 0.0001 FNR 0.0137 AUC 0.9999847535837914 thr 0.965 (12s)
+2026-09-28 13:55:27,772 m3.pipeline INFO lmd lgbm fold 3: F1 0.9954 FPR 0.0006 FNR 0.0026 AUC 0.9999975603133352 thr 0.114 (30s)
+2026-09-28 13:56:03,096 m3.pipeline INFO lmd lgbm fold 4: F1 0.9475 FPR 0.0094 FNR 0.0028 AUC 0.9997948652257166 thr 0.110 (35s)
+2026-09-28 13:56:10,732 m3.pipeline INFO mordor lgbm fold 0: F1 0.8191 FPR 0.0009 FNR 0.2807 AUC 0.9671260562133941 thr 0.254 (4s)
+2026-09-28 13:56:18,372 m3.pipeline INFO mordor lgbm fold 1: F1 0.7107 FPR 0.0027 FNR 0.3829 AUC 0.9313920283053297 thr 0.326 (8s)
+2026-09-28 13:56:59,749 m3.pipeline INFO mordor lgbm fold 2: F1 0.7140 FPR 0.0094 FNR 0.2130 AUC 0.9920428709549364 thr 0.137 (41s)
+2026-09-28 13:57:13,047 m3.pipeline INFO mordor lgbm fold 3: F1 0.7054 FPR 0.0079 FNR 0.2647 AUC 0.9886378997100775 thr 0.719 (13s)
+2026-09-28 13:57:20,809 m3.pipeline INFO mordor lgbm fold 4: F1 0.9211 FPR 0.0175 FNR 0.0040 AUC 0.9995252272882732 thr 0.434 (8s)
+2026-09-28 13:57:26,571 m3.pipeline INFO mordor-reduced lgbm fold 0: F1 0.1384 FPR 0.2700 FNR 0.0630 AUC 0.8905701622480223 thr 0.024 (4s)
+2026-09-28 13:57:37,095 m3.pipeline INFO mordor-reduced lgbm fold 1: F1 0.3704 FPR 0.0062 FNR 0.7113 AUC 0.8411274253489791 thr 0.431 (10s)
+2026-09-28 13:57:46,290 m3.pipeline INFO mordor-reduced lgbm fold 2: F1 0.1654 FPR 0.1808 FNR 0.1853 AUC 0.8503300699727678 thr 0.038 (9s)
+2026-09-28 13:57:49,592 m3.pipeline INFO mordor-reduced lgbm fold 3: F1 0.1810 FPR 0.1948 FNR 0.0459 AUC 0.8733011580165031 thr 0.044 (3s)
+2026-09-28 13:57:53,102 m3.pipeline INFO mordor-reduced lgbm fold 4: F1 0.0424 FPR 0.0182 FNR 0.9746 AUC 0.6447219612255736 thr 0.213 (4s)
+2026-09-28 13:57:53,455 m3 INFO ==== stage train done in 299s ====
+2026-09-28 13:57:55,151 m3 INFO args {'stage': 'sensitivity', 'quick': False, 'force': True, 'skip_llm': False, 'models': ('lgbm',), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 13:57:55,151 m3 INFO ==== stage sensitivity ====
+2026-09-28 13:58:38,858 m3.pipeline INFO sens lgbm num_leaves=7 F1 0.9842 AUC 0.9999886724069331
+2026-09-28 13:59:35,013 m3.pipeline INFO sens lgbm num_leaves=15 F1 0.9863 AUC 0.9999932842433135
+2026-09-28 14:00:42,410 m3.pipeline INFO sens lgbm num_leaves=31 F1 0.9887 AUC 0.9999960275031288
+2026-09-28 14:00:58,702 m3.pipeline INFO sens lgbm num_leaves=63 F1 0.9881 AUC 0.9999934676180583
+2026-09-28 14:01:15,401 m3.pipeline INFO sens lgbm num_leaves=127 F1 0.9881 AUC 0.999986971273814
+2026-09-28 14:02:14,262 m3.pipeline INFO sens lgbm learning_rate=0.02 F1 0.9892 AUC 0.9999973864978683
+2026-09-28 14:03:20,993 m3.pipeline INFO sens lgbm learning_rate=0.05 F1 0.9887 AUC 0.9999960275031288
+2026-09-28 14:04:20,414 m3.pipeline INFO sens lgbm learning_rate=0.1 F1 0.9884 AUC 0.999994587423571
+2026-09-28 14:04:58,100 m3.pipeline INFO sens lgbm learning_rate=0.2 F1 0.9875 AUC 0.9999877234508683
+2026-09-28 14:05:12,175 m3.pipeline INFO sens lgbm min_child_samples=20 F1 0.9879 AUC 0.999988735582774
+2026-09-28 14:06:18,874 m3.pipeline INFO sens lgbm min_child_samples=100 F1 0.9887 AUC 0.9999960275031288
+2026-09-28 14:06:40,006 m3.pipeline INFO sens lgbm min_child_samples=500 F1 0.9872 AUC 0.9999924257111045
+2026-09-28 14:07:53,066 m3.pipeline INFO sens lgbm min_child_samples=2000 F1 0.9887 AUC 0.9999943644952561
+2026-09-28 14:07:59,585 m3.pipeline INFO sens lgbm num_leaves=7 F1 0.7915 AUC 0.993084809010821
+2026-09-28 14:08:02,608 m3.pipeline INFO sens lgbm num_leaves=15 F1 0.7652 AUC 0.9755955093410471
+2026-09-28 14:08:06,260 m3.pipeline INFO sens lgbm num_leaves=31 F1 0.8191 AUC 0.9671260562133941
+2026-09-28 14:08:14,218 m3.pipeline INFO sens lgbm num_leaves=63 F1 0.7843 AUC 0.9900986802660516
+2026-09-28 14:08:23,598 m3.pipeline INFO sens lgbm num_leaves=127 F1 0.8267 AUC 0.9888706765981952
+2026-09-28 14:08:30,018 m3.pipeline INFO sens lgbm learning_rate=0.02 F1 0.8214 AUC 0.9894745159387217
+2026-09-28 14:08:33,489 m3.pipeline INFO sens lgbm learning_rate=0.05 F1 0.8191 AUC 0.9671260562133941
+2026-09-28 14:08:37,156 m3.pipeline INFO sens lgbm learning_rate=0.1 F1 0.8818 AUC 0.9706864691963873
+2026-09-28 14:08:40,288 m3.pipeline INFO sens lgbm learning_rate=0.2 F1 0.8149 AUC 0.9513672026271928
+2026-09-28 14:08:47,710 m3.pipeline INFO sens lgbm min_child_samples=20 F1 0.8679 AUC 0.9908858664467606
+2026-09-28 14:08:51,086 m3.pipeline INFO sens lgbm min_child_samples=100 F1 0.8191 AUC 0.9671260562133941
+2026-09-28 14:08:59,275 m3.pipeline INFO sens lgbm min_child_samples=500 F1 0.8947 AUC 0.9894099495967575
+2026-09-28 14:09:21,396 m3.pipeline INFO sens lgbm min_child_samples=2000 F1 0.7464 AUC 0.9826549421720586
+2026-09-28 14:09:21,398 m3 INFO ==== stage sensitivity done in 686s ====
+2026-09-28 14:09:23,063 m3 INFO args {'stage': 'cross', 'quick': False, 'force': True, 'skip_llm': False, 'models': ('lgbm',), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 14:09:23,063 m3 INFO ==== stage cross ====
+2026-09-28 14:10:21,542 m3 INFO cross lmd->mordor lgbm unified raw: F1 0.0338 AUC 0.4677505717571921
+2026-09-28 14:11:00,437 m3 INFO cross lmd->mordor lgbm unified quantile: F1 0.0001 AUC 0.39530296233287926
+2026-09-28 14:11:52,703 m3 INFO cross lmd->mordor lgbm reduced raw: F1 0.0353 AUC 0.3808415351431729
+2026-09-28 14:12:37,942 m3 INFO cross lmd->mordor lgbm reduced quantile: F1 0.0000 AUC 0.3000222727955116
+2026-09-28 14:14:53,674 m3 INFO cross mordor->lmd lgbm unified raw: F1 0.0384 AUC 0.6686928282774672
+2026-09-28 14:17:35,288 m3 INFO cross mordor->lmd lgbm unified quantile: F1 0.0010 AUC 0.2988310242828162
+2026-09-28 14:18:15,245 m3 INFO cross mordor->lmd lgbm reduced raw: F1 0.0000 AUC 0.23938804544474074
+2026-09-28 14:20:06,745 m3 INFO cross mordor->lmd lgbm reduced quantile: F1 0.0000 AUC 0.08419580201198988
+2026-09-28 14:20:06,745 m3 INFO ==== stage cross done in 644s ====
+2026-09-28 14:20:08,454 m3 INFO args {'stage': 'cascade', 'quick': False, 'force': True, 'skip_llm': False, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 14:20:08,454 m3 INFO ==== stage cascade ====
+2026-09-28 14:20:10,221 m3 INFO cascade lmd: ambiguous 0.000 disputed 0.000 | S1 F1 0.9831 -> S2 F1 0.9831 | escalated 50
+2026-09-28 14:20:10,871 m3 INFO cascade mordor: ambiguous 0.009 disputed 0.003 | S1 F1 0.8394 -> S2 F1 0.8593 | escalated 150
+2026-09-28 14:20:10,873 m3 INFO ==== stage cascade done in 2s ====
+2026-09-28 14:20:12,577 m3 INFO args {'stage': 'llm', 'quick': False, 'force': True, 'skip_llm': False, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 14:20:12,577 m3 INFO ==== stage llm ====
+2026-09-28 14:25:18,205 m3 INFO llm lmd 10/50
+2026-09-28 14:29:48,888 m3 INFO llm lmd 20/50
+2026-09-28 14:34:18,763 m3 INFO llm lmd 30/50
+2026-09-28 14:38:50,975 m3 INFO llm lmd 40/50
+2026-09-28 14:43:42,885 m3 INFO llm lmd 50/50
+2026-09-28 15:49:38,459 m3 INFO llm lmd: S2 F1 0.9831 -> S3 F1 0.9831 (LLM on disputed: acc-F1 0.4727272727272727)
+2026-09-28 15:54:16,349 m3 INFO llm mordor 10/150
+2026-09-28 15:59:10,646 m3 INFO llm mordor 20/150
+2026-09-28 16:03:56,341 m3 INFO llm mordor 30/150
+2026-09-28 16:08:18,206 m3 INFO llm mordor 40/150
+2026-09-28 16:12:44,428 m3 INFO llm mordor 50/150
+2026-09-28 16:17:10,623 m3 INFO llm mordor 60/150
+2026-09-28 16:21:41,777 m3 INFO llm mordor 70/150
+2026-09-28 16:25:47,390 m3 INFO llm mordor 80/150
+2026-09-28 16:30:07,747 m3 INFO llm mordor 90/150
+2026-09-28 16:34:15,457 m3 INFO llm mordor 100/150
+2026-09-28 16:38:11,009 m3 INFO llm mordor 110/150
+2026-09-28 16:42:26,536 m3 INFO llm mordor 120/150
+2026-09-28 16:46:32,387 m3 INFO llm mordor 130/150
+2026-09-28 16:50:37,104 m3 INFO llm mordor 140/150
+2026-09-28 16:54:37,572 m3 INFO llm mordor 150/150
+2026-09-28 18:20:13,584 m3 INFO llm mordor: S2 F1 0.8593 -> S3 F1 0.8580 (LLM on disputed: acc-F1 0.22695035460992907)
+2026-09-28 18:20:13,594 m3 INFO ==== stage llm done in 14401s ====
+2026-09-28 18:20:17,771 m3 INFO args {'stage': 'collect', 'quick': False, 'force': False, 'skip_llm': False, 'models': ('rf', 'lgbm', 'if', 'lstm'), 'lstm_folds': 5, 'llm_backend': None}
+2026-09-28 18:20:17,771 m3 INFO ==== stage collect ====
+2026-09-28 18:20:24,156 m3.collect INFO wrote results/m3_results.json
+2026-09-28 18:20:24,157 m3 INFO ==== stage collect done in 6s ====

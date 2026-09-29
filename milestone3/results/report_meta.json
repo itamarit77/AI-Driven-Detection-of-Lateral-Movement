@@ -1,0 +1,11 @@
+{
+ "group_number": "none",
+ "members": "Ela Ambar Grynbaum — ela.ambar2306@gmail.com; Daniel Shostak — danshostak0@gmail.com; Itamar Tsafrir Ornstein — itamarit77@gmail.com; Itamar Klartag — itamarklartag@gmail.com (as listed in Milestone 2)",
+ "repo": "FILL",
+ "artifacts": "FILL",
+ "hardware": "Ubuntu 24.04 (Linux 6.17), Intel Core Ultra 7 255H (16 cores, 6P + 8E + 2LP-E), integrated graphics only — no CUDA; PyTorch and Ollama on CPU",
+ "llm_memory": "5.6 GB (ollama ps; 100% CPU, 4,096-token context, no GPU)",
+ "date": "2026-09-29",
+ "ollama_version": "0.34.4",
+ "llm_calls_note": "599 model calls in 4.0 h wall clock (41 unchanged no-opinion prompts served from the interrupted first run’s cache)"
+}

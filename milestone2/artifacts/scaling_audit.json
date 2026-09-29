@@ -1,0 +1,211 @@
+{
+  "continuous_features": [
+    "f_inter_event_dt_log",
+    "f_host_evt_rate_60s",
+    "f_host_proc_create_60s",
+    "f_host_netconn_60s",
+    "f_distinct_dstport_300s",
+    "f_distinct_dstip_300s",
+    "f_inbound_peers_300s",
+    "f_adminport_conn_60s",
+    "f_inbound_adminport_60s",
+    "f_host_out_degree_1h",
+    "f_distinct_users_60s",
+    "f_cmdline_entropy"
+  ],
+  "split": "GroupShuffleSplit by host x day, 30% test, seed 7 (as in split_audit.py)",
+  "LMD": {
+    "n_train": 1251731,
+    "n_test": 501105,
+    "groups_train": 29,
+    "groups_test": 13,
+    "features": {
+      "f_inter_event_dt_log": {
+        "train_median": 0.5371212435364809,
+        "train_iqr": 0.6243995113849679,
+        "test_median_raw": 0.5431559216687373,
+        "test_median_scaled": 0.009664770747291163,
+        "test_p90_scaled": 1.1032302170577888
+      },
+      "f_host_evt_rate_60s": {
+        "train_median": 60.0,
+        "train_iqr": 6.0,
+        "test_median_raw": 60.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 1.0
+      },
+      "f_host_proc_create_60s": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 1.0
+      },
+      "f_host_netconn_60s": {
+        "train_median": 55.0,
+        "train_iqr": 12.0,
+        "test_median_raw": 54.0,
+        "test_median_scaled": -0.08333333333333333,
+        "test_p90_scaled": 0.6666666666666666
+      },
+      "f_distinct_dstport_300s": {
+        "train_median": 2.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 2.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0
+      },
+      "f_distinct_dstip_300s": {
+        "train_median": 16.0,
+        "train_iqr": 40.0,
+        "test_median_raw": 15.0,
+        "test_median_scaled": -0.025,
+        "test_p90_scaled": 1.4
+      },
+      "f_inbound_peers_300s": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0
+      },
+      "f_adminport_conn_60s": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0
+      },
+      "f_inbound_adminport_60s": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0
+      },
+      "f_host_out_degree_1h": {
+        "train_median": 332.0,
+        "train_iqr": 119.0,
+        "test_median_raw": 332.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.44537815126050423
+      },
+      "f_distinct_users_60s": {
+        "train_median": 2.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 2.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 1.0
+      },
+      "f_cmdline_entropy": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0
+      }
+    }
+  },
+  "Mordor": {
+    "n_train": 532687,
+    "n_test": 250680,
+    "groups_train": 2,
+    "groups_test": 2,
+    "features": {
+      "f_inter_event_dt_log": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0009995003330835331
+      },
+      "f_host_evt_rate_60s": {
+        "train_median": 13352.0,
+        "train_iqr": 9527.0,
+        "test_median_raw": 7316.0,
+        "test_median_scaled": -0.6335677548021413,
+        "test_p90_scaled": 0.9038522095098143
+      },
+      "f_host_proc_create_60s": {
+        "train_median": 8.0,
+        "train_iqr": 16.0,
+        "test_median_raw": 4.0,
+        "test_median_scaled": -0.25,
+        "test_p90_scaled": 5.375
+      },
+      "f_host_netconn_60s": {
+        "train_median": 11.0,
+        "train_iqr": 34.0,
+        "test_median_raw": 3.0,
+        "test_median_scaled": -0.23529411764705882,
+        "test_p90_scaled": 0.35294117647058826
+      },
+      "f_distinct_dstport_300s": {
+        "train_median": 8.0,
+        "train_iqr": 5.0,
+        "test_median_raw": 4.0,
+        "test_median_scaled": -0.8,
+        "test_p90_scaled": 0.6
+      },
+      "f_distinct_dstip_300s": {
+        "train_median": 10.0,
+        "train_iqr": 7.0,
+        "test_median_raw": 5.0,
+        "test_median_scaled": -0.7142857142857143,
+        "test_p90_scaled": 0.5714285714285714
+      },
+      "f_inbound_peers_300s": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 5.0
+      },
+      "f_adminport_conn_60s": {
+        "train_median": 0.0,
+        "train_iqr": 5.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 2.6
+      },
+      "f_inbound_adminport_60s": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 3.0
+      },
+      "f_host_out_degree_1h": {
+        "train_median": 15.0,
+        "train_iqr": 28.0,
+        "test_median_raw": 11.0,
+        "test_median_scaled": -0.14285714285714285,
+        "test_p90_scaled": 1.1785714285714286
+      },
+      "f_distinct_users_60s": {
+        "train_median": 4.0,
+        "train_iqr": 2.0,
+        "test_median_raw": 4.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 3.0
+      },
+      "f_cmdline_entropy": {
+        "train_median": 0.0,
+        "train_iqr": 1.0,
+        "test_median_raw": 0.0,
+        "test_median_scaled": 0.0,
+        "test_p90_scaled": 0.0
+      }
+    }
+  },
+  "cross_fit": {
+    "f_host_evt_rate_60s": {
+      "mordor_median_under_LMD_fit": 1986.8333333333333,
+      "lmd_median_under_Mordor_fit": -1.3951926104754908
+    },
+    "f_distinct_dstip_300s": {
+      "mordor_median_under_LMD_fit": -0.225,
+      "lmd_median_under_Mordor_fit": 0.8571428571428571
+    }
+  }
+}

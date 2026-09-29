@@ -1,0 +1,36 @@
+{
+  "LMD": {
+    "f_host_evt_rate_60s": {
+      "median": 60.0,
+      "p90": 66.0,
+      "max": 80.0
+    },
+    "f_host_out_degree_1h": {
+      "median": 332.0,
+      "p90": 385.0,
+      "max": 389.0
+    },
+    "f_distinct_dstip_300s": {
+      "median": 16.0,
+      "p90": 72.0,
+      "max": 97.0
+    }
+  },
+  "Mordor": {
+    "f_host_evt_rate_60s": {
+      "median": 11981.0,
+      "p90": 22957.0,
+      "max": 30177.0
+    },
+    "f_host_out_degree_1h": {
+      "median": 15.0,
+      "p90": 43.0,
+      "max": 105.0
+    },
+    "f_distinct_dstip_300s": {
+      "median": 7.0,
+      "p90": 18.0,
+      "max": 39.0
+    }
+  }
+}

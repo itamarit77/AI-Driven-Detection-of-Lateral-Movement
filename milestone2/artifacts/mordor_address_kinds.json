@@ -1,0 +1,32 @@
+{
+  "outbound_dest": {
+    "benign": {
+      "unicast": 0.9689,
+      "broadcast": 0.0214,
+      "multicast": 0.0097
+    },
+    "n_benign": 1029,
+    "attack": {
+      "unicast": 1.0
+    },
+    "n_attack": 1339
+  },
+  "inbound_src": {
+    "benign": {
+      "unicast": 0.9742,
+      "broadcast": 0.021,
+      "multicast": 0.0048
+    },
+    "n_benign": 1047,
+    "n_attack": 0
+  },
+  "security_client": {
+    "benign": {
+      "unicast": 0.5628,
+      "null": 0.3341,
+      "loopback": 0.1031
+    },
+    "n_benign": 892,
+    "n_attack": 0
+  }
+}

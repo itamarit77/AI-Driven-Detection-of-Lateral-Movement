@@ -1,0 +1,994 @@
+{
+ "model": "lgbm",
+ "features": [
+  "f_inter_event_dt_log",
+  "f_host_evt_rate_60s",
+  "f_host_proc_create_60s",
+  "f_host_netconn_60s",
+  "f_distinct_dstport_300s",
+  "f_distinct_dstip_300s",
+  "f_adminport_conn_60s",
+  "f_inbound_adminport_60s",
+  "f_inbound_peers_300s",
+  "f_lolbin_parent_child",
+  "f_remote_exec_parent",
+  "f_remote_exec_after_inbound",
+  "f_image_is_lolbin",
+  "f_exec_from_staging",
+  "f_cmdline_entropy",
+  "f_cmdline_susp",
+  "f_integrity_high",
+  "f_admin_port_flag",
+  "f_initiated",
+  "f_is_ipv6",
+  "f_lsass_access",
+  "f_cred_access_mask",
+  "f_exec_file_drop",
+  "f_file_drop_staging",
+  "f_host_out_degree_1h",
+  "f_rare_dst_pair",
+  "f_distinct_users_60s",
+  "f_explicit_cred_4648",
+  "f_network_logon_t3",
+  "f_kerberos_tgs_4769",
+  "f_admin_share_access",
+  "f_service_install",
+  "f_sec_observed",
+  "f_net_observed",
+  "f_event_category"
+ ],
+ "n_features": 35,
+ "params": {
+  "n_estimators": 600,
+  "learning_rate": 0.05,
+  "num_leaves": 31,
+  "min_child_samples": 100,
+  "subsample": 0.8,
+  "subsample_freq": 1,
+  "colsample_bytree": 0.8,
+  "reg_lambda": 1.0,
+  "random_state": 42,
+  "n_jobs": -1,
+  "verbosity": -1,
+  "deterministic": true,
+  "force_row_wise": true
+ },
+ "fold_metrics": [
+  {
+   "n": 154244,
+   "pos": 3506,
+   "thr": 0.2540801486415247,
+   "tp": 2522,
+   "fp": 130,
+   "fn": 984,
+   "tn": 150608,
+   "precision": 0.9509803921568627,
+   "recall": 0.7193382772390188,
+   "f1": 0.8190971094511206,
+   "fpr": 0.000862423542835914,
+   "fnr": 0.28066172276098117,
+   "accuracy": 0.9927776769274655,
+   "roc_auc": 0.9671260562133941,
+   "pr_auc": 0.8175152403798858,
+   "fold": 0,
+   "n_train": 537311,
+   "n_val": 91812,
+   "seconds": 3.8
+  },
+  {
+   "n": 154320,
+   "pos": 3447,
+   "thr": 0.32155962184864406,
+   "tp": 2129,
+   "fp": 420,
+   "fn": 1318,
+   "tn": 150453,
+   "precision": 0.8352295017653982,
+   "recall": 0.6176385262547143,
+   "f1": 0.7101400933955971,
+   "fpr": 0.0027837982939293315,
+   "fnr": 0.38236147374528573,
+   "accuracy": 0.9887376879212026,
+   "roc_auc": 0.9308356397581183,
+   "pr_auc": 0.71746197164802,
+   "fold": 1,
+   "n_train": 520336,
+   "n_val": 108711,
+   "seconds": 8.1
+  },
+  {
+   "n": 154125,
+   "pos": 3390,
+   "thr": 0.5388920714485402,
+   "tp": 2537,
+   "fp": 1125,
+   "fn": 853,
+   "tn": 149610,
+   "precision": 0.692790824685964,
+   "recall": 0.748377581120944,
+   "f1": 0.7195121951219513,
+   "fpr": 0.007463429196935018,
+   "fnr": 0.25162241887905606,
+   "accuracy": 0.9871662611516626,
+   "roc_auc": 0.993943620213755,
+   "pr_auc": 0.8786028839443083,
+   "fold": 2,
+   "n_train": 392399,
+   "n_val": 236843,
+   "seconds": 26.6
+  },
+  {
+   "n": 154152,
+   "pos": 3419,
+   "thr": 0.7190766356625267,
+   "tp": 2514,
+   "fp": 1195,
+   "fn": 905,
+   "tn": 149538,
+   "precision": 0.6778107306551631,
+   "recall": 0.7353027200935947,
+   "f1": 0.7053872053872053,
+   "fpr": 0.007927925537208176,
+   "fnr": 0.2646972799064054,
+   "accuracy": 0.9863770823602678,
+   "roc_auc": 0.9886378997100775,
+   "pr_auc": 0.701171923798445,
+   "fold": 3,
+   "n_train": 559354,
+   "n_val": 69861,
+   "seconds": 14.2
+  },
+  {
+   "n": 166526,
+   "pos": 15787,
+   "thr": 0.4425819843764797,
+   "tp": 15724,
+   "fp": 2914,
+   "fn": 63,
+   "tn": 147825,
+   "precision": 0.843652752441249,
+   "recall": 0.9960093748020523,
+   "f1": 0.9135221496005809,
+   "fpr": 0.01933142716881497,
+   "fnr": 0.0039906251979476785,
+   "accuracy": 0.9821229117375064,
+   "roc_auc": 0.999483374405332,
+   "pr_auc": 0.9955276399495069,
+   "fold": 4,
+   "n_train": 510700,
+   "n_val": 106141,
+   "seconds": 6.5
+  }
+ ],
+ "fold_metrics_thr05": [
+  {
+   "n": 154244,
+   "pos": 3506,
+   "thr": 0.5,
+   "tp": 0,
+   "fp": 0,
+   "fn": 3506,
+   "tn": 150738,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "fpr": 0.0,
+   "fnr": 1.0,
+   "accuracy": 0.97726978034802,
+   "roc_auc": 0.9671260562133941,
+   "pr_auc": 0.8175152403798858
+  },
+  {
+   "n": 154320,
+   "pos": 3447,
+   "thr": 0.5,
+   "tp": 2117,
+   "fp": 166,
+   "fn": 1330,
+   "tn": 150707,
+   "precision": 0.9272886552781427,
+   "recall": 0.614157238178126,
+   "f1": 0.7389179755671903,
+   "fpr": 0.001100263135219688,
+   "fnr": 0.3858427618218741,
+   "accuracy": 0.9903058579574909,
+   "roc_auc": 0.9308356397581183,
+   "pr_auc": 0.71746197164802
+  },
+  {
+   "n": 154125,
+   "pos": 3390,
+   "thr": 0.5,
+   "tp": 2583,
+   "fp": 1231,
+   "fn": 807,
+   "tn": 149504,
+   "precision": 0.6772417409543786,
+   "recall": 0.7619469026548673,
+   "f1": 0.7171016102165463,
+   "fpr": 0.008166650081268451,
+   "fnr": 0.23805309734513275,
+   "accuracy": 0.9867769667477697,
+   "roc_auc": 0.993943620213755,
+   "pr_auc": 0.8786028839443083
+  },
+  {
+   "n": 154152,
+   "pos": 3419,
+   "thr": 0.5,
+   "tp": 2608,
+   "fp": 1369,
+   "fn": 811,
+   "tn": 149364,
+   "precision": 0.6557706814181544,
+   "recall": 0.7627961392219947,
+   "f1": 0.7052460789616009,
+   "fpr": 0.009082284569404178,
+   "fnr": 0.23720386077800526,
+   "accuracy": 0.9858581140692304,
+   "roc_auc": 0.9886378997100775,
+   "pr_auc": 0.701171923798445
+  },
+  {
+   "n": 166526,
+   "pos": 15787,
+   "thr": 0.5,
+   "tp": 15722,
+   "fp": 2324,
+   "fn": 65,
+   "tn": 148415,
+   "precision": 0.8712179984484096,
+   "recall": 0.9958826882878318,
+   "f1": 0.929388466881447,
+   "fpr": 0.015417377055705558,
+   "fnr": 0.0041173117121682395,
+   "accuracy": 0.9856538918847507,
+   "roc_auc": 0.999483374405332,
+   "pr_auc": 0.9955276399495069
+  }
+ ],
+ "fold_thresholds": [
+  0.2540801486415247,
+  0.32155962184864406,
+  0.5388920714485402,
+  0.7190766356625267,
+  0.4425819843764797
+ ],
+ "threshold": 0.4425819843764797,
+ "summary": {
+  "f1": {
+   "mean": 0.7735317505912911,
+   "std": 0.08155220090101596
+  },
+  "precision": {
+   "mean": 0.8000928403409274,
+   "std": 0.10233840053867514
+  },
+  "recall": {
+   "mean": 0.7633332959020649,
+   "std": 0.12514796989707674
+  },
+  "fpr": {
+   "mean": 0.007673800747944682,
+   "std": 0.006423644959010685
+  },
+  "fnr": {
+   "mean": 0.2366667040979352,
+   "std": 0.12514796989707674
+  },
+  "roc_auc": {
+   "mean": 0.9760053180601356,
+   "std": 0.025106672666428506
+  },
+  "pr_auc": {
+   "mean": 0.8220559319440331,
+   "std": 0.10850202679626321
+  }
+ },
+ "summary_thr05": {
+  "f1": {
+   "mean": 0.6181308263253569,
+   "std": 0.31966884614741387
+  },
+  "precision": {
+   "mean": 0.626303815219817,
+   "std": 0.3305432705507869
+  },
+  "recall": {
+   "mean": 0.6269565936685639,
+   "std": 0.3364579090444642
+  },
+  "fpr": {
+   "mean": 0.006753314968319575,
+   "std": 0.0056577706826521825
+  },
+  "fnr": {
+   "mean": 0.373043406331436,
+   "std": 0.3364579090444641
+  },
+  "roc_auc": {
+   "mean": 0.9760053180601356,
+   "std": 0.025106672666428506
+  },
+  "pr_auc": {
+   "mean": 0.8220559319440331,
+   "std": 0.10850202679626321
+  }
+ },
+ "oof_metrics": {
+  "n": 783367,
+  "pos": 29549,
+  "tp": 25426,
+  "fp": 5784,
+  "fn": 4123,
+  "tn": 748034,
+  "precision": 0.8146747837231657,
+  "recall": 0.8604690514061389,
+  "f1": 0.8369459668526474,
+  "fpr": 0.007672939622030782,
+  "fnr": 0.13953094859386103,
+  "accuracy": 0.9873533094960599,
+  "roc_auc": 0.9845207073946082,
+  "pr_auc": 0.8605523637455554,
+  "thr": "per-fold"
+ },
+ "oof_metrics_thr05": {
+  "n": 783367,
+  "pos": 29549,
+  "thr": 0.5,
+  "tp": 23030,
+  "fp": 5090,
+  "fn": 6519,
+  "tn": 748728,
+  "precision": 0.8189900426742532,
+  "recall": 0.7793833970692747,
+  "f1": 0.7986960065199675,
+  "fpr": 0.006752292993799564,
+  "fnr": 0.22061660293072524,
+  "accuracy": 0.985180636917307,
+  "roc_auc": 0.9845207073946082,
+  "pr_auc": 0.8605523637455554
+ },
+ "lgbm_iterations": [
+  {
+   "fold": 0,
+   "best_iteration": 2
+  },
+  {
+   "fold": 1,
+   "best_iteration": 47
+  },
+  {
+   "fold": 2,
+   "best_iteration": 236
+  },
+  {
+   "fold": 3,
+   "best_iteration": 146
+  },
+  {
+   "fold": 4,
+   "best_iteration": 53
+  }
+ ],
+ "fold_bands": [
+  [
+   0.24454297841378642,
+   0.24454497841378642
+  ],
+  [
+   0.32155962184864406,
+   0.9128015643782588
+  ],
+  [
+   0.5388920714485402,
+   0.7379042966649892
+  ],
+  [
+   0.795680451170053,
+   0.9571746498564342
+  ],
+  [
+   0.5179569166466428,
+   0.8735970843844477
+  ]
+ ],
+ "error_analysis": {
+  "thr": 0.5,
+  "counts": {
+   "tp": 25426,
+   "fp": 5784,
+   "fn": 4123,
+   "tn": 748034
+  },
+  "fp_by_category": {
+   "image_load": {
+    "share": 0.504,
+    "share_in_reference": 0.06
+   },
+   "registry": {
+    "share": 0.366,
+    "share_in_reference": 0.426
+   },
+   "network_conn": {
+    "share": 0.034,
+    "share_in_reference": 0.003
+   },
+   "process_create": {
+    "share": 0.023,
+    "share_in_reference": 0.002
+   },
+   "process_access": {
+    "share": 0.021,
+    "share_in_reference": 0.184
+   },
+   "file_create": {
+    "share": 0.02,
+    "share_in_reference": 0.009
+   },
+   "file_delete": {
+    "share": 0.016,
+    "share_in_reference": 0.002
+   },
+   "process_end": {
+    "share": 0.01,
+    "share_in_reference": 0.001
+   }
+  },
+  "fn_by_category": {
+   "image_load": {
+    "share": 0.507,
+    "share_in_reference": 0.097
+   },
+   "registry": {
+    "share": 0.221,
+    "share_in_reference": 0.825
+   },
+   "process_access": {
+    "share": 0.13,
+    "share_in_reference": 0.006
+   },
+   "network_conn": {
+    "share": 0.078,
+    "share_in_reference": 0.04
+   },
+   "file_create": {
+    "share": 0.016,
+    "share_in_reference": 0.02
+   },
+   "process_create": {
+    "share": 0.013,
+    "share_in_reference": 0.001
+   },
+   "process_end": {
+    "share": 0.012,
+    "share_in_reference": 0.001
+   },
+   "file_delete": {
+    "share": 0.011,
+    "share_in_reference": 0.005
+   }
+  },
+  "fp_by_host": {
+   "SCRANTON.dmevals.local": 0.65,
+   "UTICA.dmevals.local": 0.324,
+   "NASHUA.dmevals.local": 0.024,
+   "NEWYORK.dmevals.local": 0.003
+  },
+  "fn_by_host": {
+   "SCRANTON.dmevals.local": 0.428,
+   "UTICA.dmevals.local": 0.296,
+   "NASHUA.dmevals.local": 0.253,
+   "NEWYORK.dmevals.local": 0.024
+  },
+  "fp_feature_shift_vs_tn": {
+   "f_image_is_lolbin": {
+    "error_median": 1.0,
+    "reference_median": 0.0,
+    "shift_iqr": 1.0
+   },
+   "f_host_evt_rate_60s": {
+    "error_median": 5237.5,
+    "reference_median": 12063.0,
+    "shift_iqr": -0.5706462670345289
+   },
+   "f_host_out_degree_1h": {
+    "error_median": 7.0,
+    "reference_median": 15.0,
+    "shift_iqr": -0.32
+   },
+   "f_distinct_dstip_300s": {
+    "error_median": 6.0,
+    "reference_median": 7.0,
+    "shift_iqr": -0.125
+   },
+   "f_host_proc_create_60s": {
+    "error_median": 7.0,
+    "reference_median": 6.0,
+    "shift_iqr": 0.0625
+   },
+   "f_inter_event_dt_log": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_adminport_conn_60s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_inbound_adminport_60s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_inbound_peers_300s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_host_netconn_60s": {
+    "error_median": 8.0,
+    "reference_median": 8.0,
+    "shift_iqr": 0.0
+   },
+   "f_lolbin_parent_child": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_parent": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_after_inbound": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_from_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_entropy": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_susp": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_integrity_high": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_distinct_dstport_300s": {
+    "error_median": 7.0,
+    "reference_median": 7.0,
+    "shift_iqr": 0.0
+   },
+   "f_admin_port_flag": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_initiated": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_lsass_access": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_is_ipv6": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cred_access_mask": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_file_drop": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_file_drop_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   }
+  },
+  "fn_feature_shift_vs_tp": {
+   "f_image_is_lolbin": {
+    "error_median": 0.0,
+    "reference_median": 1.0,
+    "shift_iqr": -1.0
+   },
+   "f_inbound_peers_300s": {
+    "error_median": 1.0,
+    "reference_median": 0.0,
+    "shift_iqr": 1.0
+   },
+   "f_host_evt_rate_60s": {
+    "error_median": 2560.0,
+    "reference_median": 10910.0,
+    "shift_iqr": -0.6981021653707884
+   },
+   "f_distinct_dstport_300s": {
+    "error_median": 5.0,
+    "reference_median": 3.0,
+    "shift_iqr": 0.3333333333333333
+   },
+   "f_host_netconn_60s": {
+    "error_median": 8.0,
+    "reference_median": 2.0,
+    "shift_iqr": 0.2857142857142857
+   },
+   "f_distinct_dstip_300s": {
+    "error_median": 3.0,
+    "reference_median": 5.0,
+    "shift_iqr": -0.25
+   },
+   "f_host_proc_create_60s": {
+    "error_median": 6.0,
+    "reference_median": 3.0,
+    "shift_iqr": 0.1875
+   },
+   "f_host_out_degree_1h": {
+    "error_median": 7.0,
+    "reference_median": 10.0,
+    "shift_iqr": -0.12
+   },
+   "f_inter_event_dt_log": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_inbound_adminport_60s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_lolbin_parent_child": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_parent": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_remote_exec_after_inbound": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_from_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_entropy": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cmdline_susp": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_integrity_high": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_adminport_conn_60s": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_admin_port_flag": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_initiated": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_lsass_access": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_is_ipv6": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_cred_access_mask": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_exec_file_drop": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   },
+   "f_file_drop_staging": {
+    "error_median": 0.0,
+    "reference_median": 0.0,
+    "shift_iqr": 0.0
+   }
+  },
+  "fp_score_quantiles": [
+   0.7512368205766151,
+   0.9548155056276475,
+   1.091071584802136
+  ],
+  "fn_score_quantiles": [
+   -0.21253906511747933,
+   -0.1866498056351732,
+   0.23091540995670257
+  ],
+  "most_confident_fp": [
+   {
+    "row_id": 759158,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 759311,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 761084,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 766544,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 753938,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 764282,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 766477,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 766085,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 763672,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 763811,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 764157,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 742823,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 756827,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 754285,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 767113,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 767370,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 767749,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 767808,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 742573,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 756756,
+    "score": 1.091071584802136,
+    "category": "network_conn",
+    "host": "UTICA.dmevals.local"
+   }
+  ],
+  "most_confident_fn": [
+   {
+    "row_id": 185401,
+    "score": -0.2184109683229415,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 185320,
+    "score": -0.2182851101184352,
+    "category": "process_access",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 584802,
+    "score": -0.21822763902622277,
+    "category": "process_end",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 584786,
+    "score": -0.21822763902622277,
+    "category": "process_end",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 49010,
+    "score": -0.21633419778079022,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 49011,
+    "score": -0.21601606309185584,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 49012,
+    "score": -0.21601606309185584,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 49898,
+    "score": -0.2150235920192597,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 49897,
+    "score": -0.2145232092205166,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 49896,
+    "score": -0.2145232092205166,
+    "category": "registry",
+    "host": "SCRANTON.dmevals.local"
+   },
+   {
+    "row_id": 344679,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344659,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344676,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344680,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344657,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344683,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344661,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344665,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344681,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   },
+   {
+    "row_id": 344686,
+    "score": -0.21426007581398177,
+    "category": "registry",
+    "host": "UTICA.dmevals.local"
+   }
+  ]
+ },
+ "seconds_total": 61.3
+}

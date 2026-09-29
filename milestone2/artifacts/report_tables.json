@@ -1,0 +1,1808 @@
+{
+ "lmd_stats": [
+  [
+   "Host out-degree /1h",
+   "309.01",
+   "13.28",
+   "0.015",
+   "\u03b4=-0.97",
+   "0.299",
+   "<0.001"
+  ],
+  [
+   "Event category",
+   "\u2014",
+   "\u2014",
+   "\u2014",
+   "V=0.85",
+   "0.265",
+   "<0.001"
+  ],
+  [
+   "Net-conns /60s",
+   "51.81",
+   "10.80",
+   "0.107",
+   "\u03b4=-0.79",
+   "0.206",
+   "<0.001"
+  ],
+  [
+   "Distinct dst-IPs /5m",
+   "28.61",
+   "3.03",
+   "0.080",
+   "\u03b4=-0.84",
+   "0.194",
+   "<0.001"
+  ],
+  [
+   "Inbound peers /5m",
+   "0.09",
+   "1.33",
+   "0.798",
+   "\u03b4=0.60",
+   "0.150",
+   "<0.001"
+  ],
+  [
+   "Weekday",
+   "\u2014",
+   "\u2014",
+   "\u2014",
+   "V=0.48",
+   "0.147",
+   "<0.001"
+  ],
+  [
+   "Host event rate /60s",
+   "60.48",
+   "47.24",
+   "0.234",
+   "\u03b4=-0.53",
+   "0.126",
+   "<0.001"
+  ],
+  [
+   "Distinct dst-ports /5m",
+   "2.03",
+   "2.81",
+   "0.562",
+   "\u03b4=0.12",
+   "0.117",
+   "<0.001"
+  ],
+  [
+   "Proc-creates /60s",
+   "0.73",
+   "2.97",
+   "0.750",
+   "\u03b4=0.50",
+   "0.096",
+   "<0.001"
+  ],
+  [
+   "PID = ExecutionPID (control)",
+   "0.0005",
+   "0.23",
+   "0.614",
+   "V=0.46",
+   "0.067",
+   "<0.001"
+  ]
+ ],
+ "mordor_stats": [
+  [
+   "Image is LOLBin",
+   "0.0057",
+   "0.89",
+   "0.941",
+   "V=0.87",
+   "0.170",
+   "<0.001"
+  ],
+  [
+   "Diurnal sin",
+   "0.82",
+   "0.75",
+   "0.181",
+   "\u03b4=-0.64",
+   "0.087",
+   "<0.001"
+  ],
+  [
+   "Seconds-in-day",
+   "25,324",
+   "14,839",
+   "0.200",
+   "\u03b4=-0.60",
+   "0.087",
+   "<0.001"
+  ],
+  [
+   "Diurnal cos",
+   "-0.26",
+   "0.44",
+   "0.800",
+   "\u03b4=0.60",
+   "0.085",
+   "<0.001"
+  ],
+  [
+   "Host out-degree /1h",
+   "20.15",
+   "11.75",
+   "0.370",
+   "\u03b4=-0.26",
+   "0.084",
+   "<0.001"
+  ],
+  [
+   "Distinct dst-ports /5m",
+   "6.30",
+   "4.96",
+   "0.392",
+   "\u03b4=-0.22",
+   "0.047",
+   "<0.001"
+  ],
+  [
+   "Net-conns /60s",
+   "23.74",
+   "15.59",
+   "0.395",
+   "\u03b4=-0.21",
+   "0.039",
+   "<0.001"
+  ],
+  [
+   "Distinct dst-IPs /5m",
+   "8.28",
+   "5.35",
+   "0.376",
+   "\u03b4=-0.25",
+   "0.039",
+   "<0.001"
+  ],
+  [
+   "Explicit cred (4648)",
+   "0.0001",
+   "0.0000",
+   "0.500",
+   "V=0.00",
+   "0.000",
+   "1.000"
+  ],
+  [
+   "Network logon type 3",
+   "0.0006",
+   "0.0000",
+   "0.500",
+   "V=0.00",
+   "0.000",
+   "<0.001"
+  ],
+  [
+   "Kerberos TGS (4769)",
+   "0.0001",
+   "0.0000",
+   "0.500",
+   "V=0.00",
+   "0.000",
+   "1.000"
+  ],
+  [
+   "Admin-share access",
+   "0.0002",
+   "0.0000",
+   "0.500",
+   "V=0.00",
+   "0.000",
+   "0.341"
+  ],
+  [
+   "Service install (7045/4697)",
+   "0.0001",
+   "0.0000",
+   "0.500",
+   "V=0.00",
+   "0.000",
+   "1.000"
+  ]
+ ],
+ "redundancy": [
+  [
+   "Seconds-in-day",
+   "Diurnal sin",
+   "-0.756"
+  ],
+  [
+   "Diurnal cos",
+   "Business-hours",
+   "-0.811"
+  ],
+  [
+   "Admin-port conns /60s",
+   "Inbound admin-port conns /60s",
+   "0.857"
+  ],
+  [
+   "Admin-port conns /60s",
+   "Inbound peers /5m",
+   "0.764"
+  ],
+  [
+   "Cmdline length",
+   "Cmdline entropy",
+   "0.924"
+  ],
+  [
+   "Cmdline length",
+   "High/SYSTEM integrity",
+   "0.875"
+  ],
+  [
+   "Cmdline entropy",
+   "High/SYSTEM integrity",
+   "0.946"
+  ]
+ ],
+ "zero_variance": {
+  "LMD": [
+   "explicit_cred_4648",
+   "network_logon_t3",
+   "kerberos_tgs_4769",
+   "admin_share_access",
+   "service_install",
+   "sec_observed"
+  ],
+  "Mordor": [
+   "weekday"
+  ]
+ },
+ "rank_lmd": [
+  [
+   "Host out-degree /1h",
+   "0.256",
+   "0.0001",
+   "0.878"
+  ],
+  [
+   "Weekday",
+   "0.060",
+   "0.0097",
+   "0.118"
+  ],
+  [
+   "Net-conns /60s",
+   "0.170",
+   "0.0000",
+   "0.001"
+  ],
+  [
+   "Distinct dst-IPs /5m",
+   "0.112",
+   "0.0000",
+   "0.001"
+  ],
+  [
+   "Inbound peers /5m",
+   "0.090",
+   "0.0000",
+   "0.000"
+  ],
+  [
+   "Proc-creates /60s",
+   "0.051",
+   "0.0000",
+   "0.000"
+  ],
+  [
+   "Event category",
+   "0.051",
+   "0.0000",
+   "0.000"
+  ],
+  [
+   "Distinct dst-ports /5m",
+   "0.040",
+   "0.0000",
+   "0.001"
+  ],
+  [
+   "Host event rate /60s",
+   "0.040",
+   "0.0000",
+   "0.000"
+  ],
+  [
+   "Inbound admin-port conns /60s",
+   "0.032",
+   "0.0000",
+   "0.000"
+  ]
+ ],
+ "rank_mordor": [
+  [
+   "Image is LOLBin",
+   "0.312",
+   "0.0461",
+   "0.767"
+  ],
+  [
+   "Seconds-in-day",
+   "0.097",
+   "0.0003",
+   "0.044"
+  ],
+  [
+   "Diurnal sin",
+   "0.122",
+   "0.0004",
+   "0.011"
+  ],
+  [
+   "Diurnal cos",
+   "0.115",
+   "0.0004",
+   "0.010"
+  ],
+  [
+   "Event category",
+   "0.060",
+   "0.0048",
+   "0.062"
+  ],
+  [
+   "Host out-degree /1h",
+   "0.067",
+   "0.0006",
+   "0.012"
+  ],
+  [
+   "Distinct dst-IPs /5m",
+   "0.042",
+   "0.0003",
+   "0.003"
+  ],
+  [
+   "Net-conns /60s",
+   "0.026",
+   "0.0004",
+   "0.015"
+  ],
+  [
+   "Proc-creates /60s",
+   "0.019",
+   "0.0004",
+   "0.015"
+  ],
+  [
+   "Distinct dst-ports /5m",
+   "0.027",
+   "0.0003",
+   "0.005"
+  ]
+ ],
+ "cross": [
+  [
+   "Weekday",
+   "2",
+   "38",
+   "36"
+  ],
+  [
+   "Image is LOLBin",
+   "31",
+   "1",
+   "30"
+  ],
+  [
+   "PID = ExecutionPID (control)",
+   "14",
+   "38",
+   "24"
+  ],
+  [
+   "Security-log observed",
+   "38",
+   "21",
+   "17"
+  ],
+  [
+   "Diurnal cos",
+   "20",
+   "4",
+   "16"
+  ],
+  [
+   "IPv6 source",
+   "18",
+   "33",
+   "15"
+  ],
+  [
+   "Seconds-in-day",
+   "17",
+   "2",
+   "15"
+  ],
+  [
+   "Admin-port flag",
+   "15",
+   "29",
+   "14"
+  ]
+ ],
+ "summary": {
+  "LMD": {
+   "auc_random": 0.9999997078145271,
+   "prauc_random": 0.9999994591383364,
+   "auc_grouped": 1.0,
+   "prauc_grouped": 1.0,
+   "test_pos_rate": 0.35304166666666664,
+   "n": 400000,
+   "auc_grouped_no_time": 0.9999569745137691,
+   "prauc_grouped_no_time": 0.9999217677680166
+  },
+  "Mordor": {
+   "auc_random": 0.9991689040663363,
+   "prauc_random": 0.9922525396450793,
+   "auc_grouped": 0.9846781479929221,
+   "prauc_grouped": 0.9600938088922414,
+   "test_pos_rate": 0.073875,
+   "n": 400000,
+   "auc_grouped_no_time": 0.9818378015295991,
+   "prauc_grouped_no_time": 0.9491652226996402,
+   "auc_grouped_no_time_no_seedoverlap": 0.6548691751170463,
+   "prauc_grouped_no_time_no_seedoverlap": 0.37114344062262233
+  },
+  "cross_rank_spearman": 0.6010146469192373,
+  "cross_rank_spearman_p": 2.5681263297070548e-05,
+  "cross_rank_spearman_perm": 0.6435611038107754,
+  "cross_rank_basis": "composite = mean(RF MDI share, LightGBM gain share)"
+ },
+ "split": {
+  "sampling": "all positives kept; negatives sampled uniformly to 400,000 rows (seed 42)",
+  "features_notime": [
+   "f_inter_event_dt_log",
+   "f_host_evt_rate_60s",
+   "f_host_proc_create_60s",
+   "f_host_netconn_60s",
+   "f_distinct_dstport_300s",
+   "f_distinct_dstip_300s",
+   "f_adminport_conn_60s",
+   "f_inbound_adminport_60s",
+   "f_inbound_peers_300s",
+   "f_lolbin_parent_child",
+   "f_remote_exec_parent",
+   "f_remote_exec_after_inbound",
+   "f_image_is_lolbin",
+   "f_exec_from_staging",
+   "f_cmdline_len",
+   "f_cmdline_entropy",
+   "f_cmdline_susp",
+   "f_integrity_high",
+   "f_admin_port_flag",
+   "f_initiated",
+   "f_is_ipv6",
+   "f_lsass_access",
+   "f_cred_access_mask",
+   "f_exec_file_drop",
+   "f_file_drop_staging",
+   "f_host_out_degree_1h",
+   "f_rare_dst_pair",
+   "f_distinct_users_60s",
+   "f_explicit_cred_4648",
+   "f_network_logon_t3",
+   "f_kerberos_tgs_4769",
+   "f_admin_share_access",
+   "f_service_install",
+   "f_sec_observed",
+   "f_net_observed",
+   "f_event_category",
+   "f_naive_relational_pid"
+  ],
+  "features_reduced_mordor": [
+   "f_inter_event_dt_log",
+   "f_host_evt_rate_60s",
+   "f_host_proc_create_60s",
+   "f_host_netconn_60s",
+   "f_distinct_dstport_300s",
+   "f_distinct_dstip_300s",
+   "f_adminport_conn_60s",
+   "f_inbound_adminport_60s",
+   "f_inbound_peers_300s",
+   "f_admin_port_flag",
+   "f_initiated",
+   "f_is_ipv6",
+   "f_lsass_access",
+   "f_cred_access_mask",
+   "f_exec_file_drop",
+   "f_file_drop_staging",
+   "f_host_out_degree_1h",
+   "f_rare_dst_pair",
+   "f_distinct_users_60s",
+   "f_explicit_cred_4648",
+   "f_network_logon_t3",
+   "f_kerberos_tgs_4769",
+   "f_admin_share_access",
+   "f_service_install",
+   "f_sec_observed",
+   "f_net_observed",
+   "f_event_category"
+  ],
+  "features_removed_reduced": [
+   "f_lolbin_parent_child",
+   "f_remote_exec_parent",
+   "f_remote_exec_after_inbound",
+   "f_image_is_lolbin",
+   "f_exec_from_staging",
+   "f_integrity_high",
+   "f_cmdline_len",
+   "f_cmdline_entropy",
+   "f_cmdline_susp",
+   "f_seconds_in_day",
+   "f_diurnal_sin",
+   "f_diurnal_cos",
+   "f_weekday",
+   "f_is_business_hours",
+   "f_naive_relational_pid"
+  ],
+  "LMD": {
+   "random": {
+    "n_train": 280000,
+    "n_test": 120000,
+    "pos_train": 98852,
+    "pos_test": 42365,
+    "prev_test": 0.353,
+    "auc": 1.0,
+    "prauc": 1.0,
+    "n_features": 37
+   },
+   "grouped_host10min": {
+    "n_train": 279453,
+    "n_test": 120547,
+    "pos_train": 98053,
+    "pos_test": 43164,
+    "prev_test": 0.3581,
+    "auc": 1.0,
+    "prauc": 0.9999,
+    "n_features": 37
+   },
+   "grouped_host_day": {
+    "n_train": 242987,
+    "n_test": 157013,
+    "pos_train": 71157,
+    "pos_test": 70060,
+    "prev_test": 0.4462,
+    "auc": 0.9981,
+    "prauc": 0.9977,
+    "n_features": 37
+   },
+   "chronological_70_30": {
+    "n_train": 280000,
+    "n_test": 120000,
+    "pos_train": 21217,
+    "pos_test": 120000,
+    "prev_test": 1.0,
+    "auc": null,
+    "prauc": null,
+    "n_features": 37
+   }
+  },
+  "Mordor": {
+   "random": {
+    "n_train": 280000,
+    "n_test": 120000,
+    "pos_train": 20684,
+    "pos_test": 8865,
+    "prev_test": 0.0739,
+    "auc": 0.9989,
+    "prauc": 0.9905,
+    "n_features": 37
+   },
+   "grouped_host10min": {
+    "n_train": 314672,
+    "n_test": 85328,
+    "pos_train": 6717,
+    "pos_test": 22832,
+    "prev_test": 0.2676,
+    "auc": 0.9818,
+    "prauc": 0.9492,
+    "n_features": 37
+   },
+   "grouped_host_day": {
+    "n_train": 265775,
+    "n_test": 134225,
+    "pos_train": 7312,
+    "pos_test": 22237,
+    "prev_test": 0.1657,
+    "auc": 0.9761,
+    "prauc": 0.9177,
+    "n_features": 37
+   },
+   "chronological_70_30": {
+    "n_train": 280000,
+    "n_test": 120000,
+    "pos_train": 26641,
+    "pos_test": 2908,
+    "prev_test": 0.0242,
+    "auc": 0.993,
+    "prauc": 0.9089,
+    "n_features": 37
+   },
+   "grouped_host10min_reduced": {
+    "n_train": 314672,
+    "n_test": 85328,
+    "pos_train": 6717,
+    "pos_test": 22832,
+    "prev_test": 0.2676,
+    "auc": 0.6612,
+    "prauc": 0.3878,
+    "n_features": 27
+   },
+   "grouped_host_day_reduced": {
+    "n_train": 265775,
+    "n_test": 134225,
+    "pos_train": 7312,
+    "pos_test": 22237,
+    "prev_test": 0.1657,
+    "auc": 0.4779,
+    "prauc": 0.1557,
+    "n_features": 27
+   }
+  }
+ },
+ "meta": {
+  "LMD": {
+   "n_rows": 1752836,
+   "attack_prevalence": 0.08056486744909393,
+   "label_entropy_bits": 0.4041664151225399,
+   "max_mi_bits": 0.29854681595838245,
+   "n_features": 42
+  },
+  "Mordor": {
+   "n_rows": 783367,
+   "attack_prevalence": 0.03772050648035978,
+   "label_entropy_bits": 0.23174135830573173,
+   "max_mi_bits": 0.1695528530668824,
+   "n_features": 42
+  }
+ },
+ "n_pool": 42,
+ "unified": [
+  "f_inter_event_dt_log",
+  "f_host_evt_rate_60s",
+  "f_host_proc_create_60s",
+  "f_host_netconn_60s",
+  "f_distinct_dstport_300s",
+  "f_distinct_dstip_300s",
+  "f_inbound_peers_300s",
+  "f_adminport_conn_60s",
+  "f_inbound_adminport_60s",
+  "f_host_out_degree_1h",
+  "f_rare_dst_pair",
+  "f_distinct_users_60s",
+  "f_lolbin_parent_child",
+  "f_remote_exec_parent",
+  "f_remote_exec_after_inbound",
+  "f_image_is_lolbin",
+  "f_exec_from_staging",
+  "f_integrity_high",
+  "f_cmdline_entropy",
+  "f_cmdline_susp",
+  "f_admin_port_flag",
+  "f_initiated",
+  "f_is_ipv6",
+  "f_lsass_access",
+  "f_cred_access_mask",
+  "f_exec_file_drop",
+  "f_file_drop_staging",
+  "f_explicit_cred_4648",
+  "f_network_logon_t3",
+  "f_kerberos_tgs_4769",
+  "f_admin_share_access",
+  "f_service_install",
+  "f_sec_observed",
+  "f_net_observed",
+  "f_event_category"
+ ],
+ "n_unified": 35,
+ "n_event_categories": 24,
+ "D_lstm": 58,
+ "event_category_names": [
+  "dns",
+  "driver_load",
+  "explicit_cred",
+  "file_create",
+  "file_delete",
+  "file_stream",
+  "image_load",
+  "kerberos_tgs",
+  "logoff",
+  "logon",
+  "network_conn",
+  "other",
+  "pipe",
+  "process_access",
+  "process_create",
+  "process_end",
+  "raw_access",
+  "registry",
+  "remote_thread",
+  "service_install",
+  "share_access",
+  "special_priv",
+  "sysmon_config",
+  "sysmon_state"
+ ],
+ "mordor_labels": {
+  "seed_processes": 44,
+  "malicious_processes": 91,
+  "hosts_with_malicious": 4,
+  "attack_rows": 29549,
+  "rows": 783367,
+  "attack_rate": 0.03772050648035978
+ },
+ "stat": {
+  "mordor_lolbin_V": 0.87,
+  "mordor_fanout_auc": [
+   0.37,
+   0.39,
+   0.38,
+   0.4
+  ],
+  "mordor_auth_V_max": 0.005,
+  "mordor_weekday_mi": 0.0,
+  "mordor_secday_mi": 0.087,
+  "lmd_weekday_mi": 0.147,
+  "lmd_weekday_V": 0.48,
+  "lmd_secday_mi": 0.006,
+  "lmd_pid_mi": 0.067,
+  "lmd_pid_attack_mean": 0.228,
+  "lmd_credmask_V": 0.23,
+  "lmd_lsass_attack_pct": 0.08,
+  "lmd_credmask_attack_pct": 5.6,
+  "mi_dstip": {
+   "LMD": 0.19,
+   "Mordor": 0.04
+  },
+  "lmd_max_mi": 0.299,
+  "lmd_HY": 0.404,
+  "lmd_perm_top": [
+   "f_weekday",
+   0.0097,
+   0.0001
+  ],
+  "ranks": {
+   "weekday_LMD": 2.0,
+   "weekday_Mordor": 38.0,
+   "weekday_Mordor_composite": 0.0,
+   "pid_LMD": 14.0,
+   "pid_Mordor_composite": 0.0,
+   "flags_LMD": [
+    13.0,
+    18.0
+   ],
+   "flags_Mordor": [
+    16.0,
+    33.0
+   ],
+   "agg_LMD_max": 9.0,
+   "agg_Mordor_max": 12.0
+  },
+  "mordor_sessions": [
+   {
+    "start": "02:55",
+    "end": "03:28",
+    "minutes": 32.9,
+    "attack_pct": 12.2,
+    "n": 196081
+   },
+   {
+    "start": "07:54",
+    "end": "08:29",
+    "minutes": 35.3,
+    "attack_pct": 1.0,
+    "n": 587286
+   }
+  ],
+  "lmd_benign_eid3_pct": 86.0,
+  "lmd_attack_eid_pct": {
+   "7": 33.0,
+   "10": 23.0,
+   "3": 20.0,
+   "23": 16.0
+  },
+  "lmd_eid1_10_11_pct": 3.93,
+  "lmd_benign_eid10_rows": 1,
+  "lmd_attack_eid10_pct": 22.8,
+  "lmd_overlap": {
+   "seconds": 49.5,
+   "benign_after_first_attack": 21,
+   "attack_before_last_benign": 30
+  },
+  "lmd_read": {
+   "outdeg_mi": 0.3,
+   "dstip_mi": 0.19,
+   "low_auc": [
+    0.01,
+    0.08,
+    0.11
+   ],
+   "inbound_auc": 0.63,
+   "proc_auc": 0.75,
+   "peers_auc": 0.8,
+   "peers_mi": 0.15
+  },
+  "mordor_inbound_auc": 0.48
+ },
+ "family_evidence": {
+  "temporal": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "velocity": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "fanout": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "graph": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "user": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "lineage": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "cmdline": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "network": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "credential": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "tooltransfer": {
+   "LMD": false,
+   "Mordor": true
+  },
+  "auth_service": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "modality": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "structural": {
+   "LMD": true,
+   "Mordor": true
+  }
+ },
+ "feature_evidence": {
+  "f_seconds_in_day": {
+   "LMD": false,
+   "Mordor": true
+  },
+  "f_diurnal_sin": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_diurnal_cos": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_weekday": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_is_business_hours": {
+   "LMD": false,
+   "Mordor": true
+  },
+  "f_inter_event_dt_log": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_host_evt_rate_60s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_host_proc_create_60s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_host_netconn_60s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_distinct_dstport_300s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_distinct_dstip_300s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_adminport_conn_60s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_inbound_adminport_60s": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_inbound_peers_300s": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_lolbin_parent_child": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_remote_exec_parent": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_remote_exec_after_inbound": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_image_is_lolbin": {
+   "LMD": false,
+   "Mordor": true
+  },
+  "f_exec_from_staging": {
+   "LMD": false,
+   "Mordor": true
+  },
+  "f_cmdline_len": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_cmdline_entropy": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_cmdline_susp": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_integrity_high": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_admin_port_flag": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_initiated": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_is_ipv6": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_lsass_access": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_cred_access_mask": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_exec_file_drop": {
+   "LMD": false,
+   "Mordor": true
+  },
+  "f_file_drop_staging": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_host_out_degree_1h": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_rare_dst_pair": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_distinct_users_60s": {
+   "LMD": true,
+   "Mordor": false
+  },
+  "f_explicit_cred_4648": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_network_logon_t3": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_kerberos_tgs_4769": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_admin_share_access": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_service_install": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_sec_observed": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_net_observed": {
+   "LMD": false,
+   "Mordor": false
+  },
+  "f_event_category": {
+   "LMD": true,
+   "Mordor": true
+  },
+  "f_naive_relational_pid": {
+   "LMD": true,
+   "Mordor": false
+  }
+ },
+ "n_unvalidated": 13,
+ "unvalidated": [
+  "f_rare_dst_pair",
+  "f_lolbin_parent_child",
+  "f_cmdline_entropy",
+  "f_cmdline_susp",
+  "f_lsass_access",
+  "f_file_drop_staging",
+  "f_explicit_cred_4648",
+  "f_network_logon_t3",
+  "f_kerberos_tgs_4769",
+  "f_admin_share_access",
+  "f_service_install",
+  "f_sec_observed",
+  "f_net_observed"
+ ],
+ "unvalidated_by_family": {
+  "temporal": [],
+  "velocity": [],
+  "fanout": [],
+  "graph": [
+   "f_rare_dst_pair"
+  ],
+  "user": [],
+  "lineage": [
+   "f_lolbin_parent_child"
+  ],
+  "cmdline": [
+   "f_cmdline_entropy",
+   "f_cmdline_susp"
+  ],
+  "network": [],
+  "credential": [
+   "f_lsass_access"
+  ],
+  "tooltransfer": [
+   "f_file_drop_staging"
+  ],
+  "auth_service": [
+   "f_explicit_cred_4648",
+   "f_network_logon_t3",
+   "f_kerberos_tgs_4769",
+   "f_admin_share_access",
+   "f_service_install"
+  ],
+  "modality": [
+   "f_sec_observed",
+   "f_net_observed"
+  ],
+  "structural": []
+ },
+ "unvalidated_why": {
+  "f_rare_dst_pair": {
+   "LMD": {
+    "p_holm": 3.62653688806634e-20,
+    "effect_type": "CramersV",
+    "effect": 0.0071146968014075,
+    "constant": false,
+    "attack_fires": 119,
+    "benign_fires": 537,
+    "lift": 2.528995597712484,
+    "reason": "lift below 3"
+   },
+   "Mordor": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0010375172649405,
+    "constant": false,
+    "attack_fires": 11,
+    "benign_fires": 200,
+    "lift": 1.4030928288608042,
+    "reason": "not significant"
+   }
+  },
+  "f_lolbin_parent_child": {
+   "LMD": {
+    "p_holm": 9.823269082811883e-39,
+    "effect_type": "CramersV",
+    "effect": 0.009957753697987,
+    "constant": false,
+    "attack_fires": 54,
+    "benign_fires": 85,
+    "lift": 7.2502040872415074,
+    "reason": "fewer than 100 attack fires"
+   },
+   "Mordor": {
+    "p_holm": 0.0002460522799086,
+    "effect_type": "CramersV",
+    "effect": 0.007731655526004,
+    "constant": false,
+    "attack_fires": 5,
+    "benign_fires": 5,
+    "lift": 25.510778706541313,
+    "reason": "fewer than 100 attack fires"
+   }
+  },
+  "f_cmdline_entropy": {
+   "LMD": {
+    "p_holm": 0.0,
+    "effect_type": "CliffsDelta",
+    "effect": 0.0423192921785455,
+    "constant": false,
+    "reason": "effect below threshold"
+   },
+   "Mordor": {
+    "p_holm": 0.8133702958626653,
+    "effect_type": "CliffsDelta",
+    "effect": 0.0005234606999819,
+    "constant": false,
+    "reason": "not significant"
+   }
+  },
+  "f_cmdline_susp": {
+   "LMD": {
+    "p_holm": 1.870097441221001e-09,
+    "effect_type": "CramersV",
+    "effect": 0.0047711341767678,
+    "constant": false,
+    "attack_fires": 29,
+    "benign_fires": 91,
+    "lift": 3.6369053876788158,
+    "reason": "fewer than 100 attack fires"
+   },
+   "Mordor": {
+    "p_holm": 9.2806518464529e-11,
+    "effect_type": "CramersV",
+    "effect": 0.0126517731603928,
+    "constant": false,
+    "attack_fires": 14,
+    "benign_fires": 19,
+    "lift": 18.797415889038376,
+    "reason": "fewer than 100 attack fires"
+   }
+  },
+  "f_lsass_access": {
+   "LMD": {
+    "p_holm": 1.6288136473310264e-288,
+    "effect_type": "CramersV",
+    "effect": 0.027472690288822,
+    "constant": false,
+    "attack_fires": 117,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "no benign fires (lift undefined)"
+   },
+   "Mordor": {
+    "p_holm": 4.117670810426192e-05,
+    "effect_type": "CramersV",
+    "effect": 0.0053127555898496,
+    "constant": false,
+    "attack_fires": 7,
+    "benign_fires": 911,
+    "lift": 0.19602135120293576,
+    "reason": "attack rate below benign"
+   }
+  },
+  "f_file_drop_staging": {
+   "LMD": {
+    "p_holm": 6.126756531480054e-63,
+    "effect_type": "CramersV",
+    "effect": 0.0127553483575767,
+    "constant": false,
+    "attack_fires": 8,
+    "benign_fires": 3448,
+    "lift": 0.026478789525465594,
+    "reason": "attack rate below benign"
+   },
+   "Mordor": {
+    "p_holm": 8.834979941235241e-105,
+    "effect_type": "CramersV",
+    "effect": 0.0247255668802232,
+    "constant": false,
+    "attack_fires": 543,
+    "benign_fires": 5371,
+    "lift": 2.579101254451619,
+    "reason": "lift below 3"
+   }
+  },
+  "f_explicit_cred_4648": {
+   "LMD": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0,
+    "constant": true,
+    "attack_fires": 0,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "constant"
+   },
+   "Mordor": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0008979556058444,
+    "constant": false,
+    "attack_fires": 0,
+    "benign_fires": 38,
+    "lift": 0.0,
+    "reason": "not significant"
+   }
+  },
+  "f_network_logon_t3": {
+   "LMD": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0,
+    "constant": true,
+    "attack_fires": 0,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "constant"
+   },
+   "Mordor": {
+    "p_holm": 0.0008592061957923,
+    "effect_type": "CramersV",
+    "effect": 0.0045079869010686,
+    "constant": false,
+    "attack_fires": 0,
+    "benign_fires": 432,
+    "lift": 0.0,
+    "reason": "attack rate below benign"
+   }
+  },
+  "f_kerberos_tgs_4769": {
+   "LMD": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0,
+    "constant": true,
+    "attack_fires": 0,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "constant"
+   },
+   "Mordor": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0013322501900842,
+    "constant": false,
+    "attack_fires": 0,
+    "benign_fires": 59,
+    "lift": 0.0,
+    "reason": "not significant"
+   }
+  },
+  "f_admin_share_access": {
+   "LMD": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0,
+    "constant": true,
+    "attack_fires": 0,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "constant"
+   },
+   "Mordor": {
+    "p_holm": 0.3407624288810434,
+    "effect_type": "CramersV",
+    "effect": 0.0024374626865193,
+    "constant": false,
+    "attack_fires": 0,
+    "benign_fires": 144,
+    "lift": 0.0,
+    "reason": "not significant"
+   }
+  },
+  "f_service_install": {
+   "LMD": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0,
+    "constant": true,
+    "attack_fires": 0,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "constant"
+   },
+   "Mordor": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0010800134707053,
+    "constant": false,
+    "attack_fires": 0,
+    "benign_fires": 46,
+    "lift": 0.0,
+    "reason": "not significant"
+   }
+  },
+  "f_sec_observed": {
+   "LMD": {
+    "p_holm": 1.0,
+    "effect_type": "CramersV",
+    "effect": 0.0,
+    "constant": true,
+    "attack_fires": 0,
+    "benign_fires": 0,
+    "lift": null,
+    "reason": "constant"
+   },
+   "Mordor": {
+    "p_holm": 1.0958691560949351e-92,
+    "effect_type": "CramersV",
+    "effect": 0.0232445215034922,
+    "constant": false,
+    "attack_fires": 29549,
+    "benign_fires": 743141,
+    "lift": 1.0143673946128662,
+    "reason": "lift below 3"
+   }
+  },
+  "f_net_observed": {
+   "LMD": {
+    "p_holm": 2.1956752142862623e-61,
+    "effect_type": "CramersV",
+    "effect": 0.0125905217311956,
+    "constant": false,
+    "attack_fires": 141151,
+    "benign_fires": 1611543,
+    "lift": 0.9995797719037959,
+    "reason": "attack rate below benign"
+   },
+   "Mordor": {
+    "p_holm": 1.2906697155954988e-10,
+    "effect_type": "CramersV",
+    "effect": 0.0077441766456208,
+    "constant": false,
+    "attack_fires": 29549,
+    "benign_fires": 752595,
+    "lift": 1.0016250440143768,
+    "reason": "lift below 3"
+   }
+  }
+ },
+ "scaling": {
+  "continuous_features": [
+   "f_inter_event_dt_log",
+   "f_host_evt_rate_60s",
+   "f_host_proc_create_60s",
+   "f_host_netconn_60s",
+   "f_distinct_dstport_300s",
+   "f_distinct_dstip_300s",
+   "f_inbound_peers_300s",
+   "f_adminport_conn_60s",
+   "f_inbound_adminport_60s",
+   "f_host_out_degree_1h",
+   "f_distinct_users_60s",
+   "f_cmdline_entropy"
+  ],
+  "split": "GroupShuffleSplit by host x day, 30% test, seed 7 (as in split_audit.py)",
+  "LMD": {
+   "n_train": 1251731,
+   "n_test": 501105,
+   "groups_train": 29,
+   "groups_test": 13,
+   "features": {
+    "f_inter_event_dt_log": {
+     "train_median": 0.5371212435364809,
+     "train_iqr": 0.6243995113849679,
+     "test_median_raw": 0.5431559216687373,
+     "test_median_scaled": 0.009664770747291163,
+     "test_p90_scaled": 1.1032302170577888
+    },
+    "f_host_evt_rate_60s": {
+     "train_median": 60.0,
+     "train_iqr": 6.0,
+     "test_median_raw": 60.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 1.0
+    },
+    "f_host_proc_create_60s": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 1.0
+    },
+    "f_host_netconn_60s": {
+     "train_median": 55.0,
+     "train_iqr": 12.0,
+     "test_median_raw": 54.0,
+     "test_median_scaled": -0.08333333333333333,
+     "test_p90_scaled": 0.6666666666666666
+    },
+    "f_distinct_dstport_300s": {
+     "train_median": 2.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 2.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0
+    },
+    "f_distinct_dstip_300s": {
+     "train_median": 16.0,
+     "train_iqr": 40.0,
+     "test_median_raw": 15.0,
+     "test_median_scaled": -0.025,
+     "test_p90_scaled": 1.4
+    },
+    "f_inbound_peers_300s": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0
+    },
+    "f_adminport_conn_60s": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0
+    },
+    "f_inbound_adminport_60s": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0
+    },
+    "f_host_out_degree_1h": {
+     "train_median": 332.0,
+     "train_iqr": 119.0,
+     "test_median_raw": 332.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.44537815126050423
+    },
+    "f_distinct_users_60s": {
+     "train_median": 2.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 2.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 1.0
+    },
+    "f_cmdline_entropy": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0
+    }
+   }
+  },
+  "Mordor": {
+   "n_train": 532687,
+   "n_test": 250680,
+   "groups_train": 2,
+   "groups_test": 2,
+   "features": {
+    "f_inter_event_dt_log": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0009995003330835331
+    },
+    "f_host_evt_rate_60s": {
+     "train_median": 13352.0,
+     "train_iqr": 9527.0,
+     "test_median_raw": 7316.0,
+     "test_median_scaled": -0.6335677548021413,
+     "test_p90_scaled": 0.9038522095098143
+    },
+    "f_host_proc_create_60s": {
+     "train_median": 8.0,
+     "train_iqr": 16.0,
+     "test_median_raw": 4.0,
+     "test_median_scaled": -0.25,
+     "test_p90_scaled": 5.375
+    },
+    "f_host_netconn_60s": {
+     "train_median": 11.0,
+     "train_iqr": 34.0,
+     "test_median_raw": 3.0,
+     "test_median_scaled": -0.23529411764705882,
+     "test_p90_scaled": 0.35294117647058826
+    },
+    "f_distinct_dstport_300s": {
+     "train_median": 8.0,
+     "train_iqr": 5.0,
+     "test_median_raw": 4.0,
+     "test_median_scaled": -0.8,
+     "test_p90_scaled": 0.6
+    },
+    "f_distinct_dstip_300s": {
+     "train_median": 10.0,
+     "train_iqr": 7.0,
+     "test_median_raw": 5.0,
+     "test_median_scaled": -0.7142857142857143,
+     "test_p90_scaled": 0.5714285714285714
+    },
+    "f_inbound_peers_300s": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 5.0
+    },
+    "f_adminport_conn_60s": {
+     "train_median": 0.0,
+     "train_iqr": 5.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 2.6
+    },
+    "f_inbound_adminport_60s": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 3.0
+    },
+    "f_host_out_degree_1h": {
+     "train_median": 15.0,
+     "train_iqr": 28.0,
+     "test_median_raw": 11.0,
+     "test_median_scaled": -0.14285714285714285,
+     "test_p90_scaled": 1.1785714285714286
+    },
+    "f_distinct_users_60s": {
+     "train_median": 4.0,
+     "train_iqr": 2.0,
+     "test_median_raw": 4.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 3.0
+    },
+    "f_cmdline_entropy": {
+     "train_median": 0.0,
+     "train_iqr": 1.0,
+     "test_median_raw": 0.0,
+     "test_median_scaled": 0.0,
+     "test_p90_scaled": 0.0
+    }
+   }
+  },
+  "cross_fit": {
+   "f_host_evt_rate_60s": {
+    "mordor_median_under_LMD_fit": 1986.8333333333333,
+    "lmd_median_under_Mordor_fit": -1.3951926104754908
+   },
+   "f_distinct_dstip_300s": {
+    "mordor_median_under_LMD_fit": -0.225,
+    "lmd_median_under_Mordor_fit": 0.8571428571428571
+   }
+  }
+ },
+ "addr_kinds": {
+  "LMD": {
+   "outbound_dest": {
+    "benign": {
+     "broadcast": 0.7455,
+     "unicast": 0.2229,
+     "multicast": 0.0316
+    },
+    "n_benign": 778177,
+    "attack": {
+     "unicast": 0.9294,
+     "multicast": 0.0425,
+     "loopback": 0.027,
+     "broadcast": 0.0012
+    },
+    "n_attack": 10434
+   },
+   "inbound_src": {
+    "benign": {
+     "broadcast": 0.9614,
+     "unicast": 0.0344,
+     "loopback": 0.0032,
+     "null": 0.001
+    },
+    "n_benign": 602168,
+    "attack": {
+     "unicast": 0.9263,
+     "multicast": 0.0659,
+     "null": 0.0064,
+     "broadcast": 0.0007,
+     "loopback": 0.0007
+    },
+    "n_attack": 17310
+   }
+  },
+  "Mordor": {
+   "outbound_dest": {
+    "benign": {
+     "unicast": 0.9689,
+     "broadcast": 0.0214,
+     "multicast": 0.0097
+    },
+    "n_benign": 1029,
+    "attack": {
+     "unicast": 1.0
+    },
+    "n_attack": 1339
+   },
+   "inbound_src": {
+    "benign": {
+     "unicast": 0.9742,
+     "broadcast": 0.021,
+     "multicast": 0.0048
+    },
+    "n_benign": 1047,
+    "n_attack": 0
+   },
+   "security_client": {
+    "benign": {
+     "unicast": 0.5628,
+     "null": 0.3341,
+     "loopback": 0.1031
+    },
+    "n_benign": 892,
+    "n_attack": 0
+   }
+  }
+ },
+ "mordor_bins": {
+  "bins_total": 15,
+  "bins_both": 13
+ },
+ "mordor_eid3_pct": 0.4,
+ "mordor_initiated_pct": 0.3,
+ "lmd_eid3_pct": 80.3,
+ "lmd_initiated_pct": 45.0,
+ "schema_rows": [
+  [
+   "Temporal",
+   "inter_event_dt_log",
+   "SystemTime per host",
+   "@timestamp per host",
+   "robust",
+   "LMD + Mordor"
+  ],
+  [
+   "Velocity",
+   "host_evt_rate_60s, host_proc_create_60s, host_netconn_60s",
+   "per Computer",
+   "per Hostname",
+   "robust",
+   "LMD + Mordor"
+  ],
+  [
+   "Fan-out",
+   "distinct_dstport_300s, distinct_dstip_300s, inbound_peers_300s, adminport_conn_60s, inbound_adminport_60s",
+   "EID 3 (outbound dest.; inbound SourceIp)",
+   "EID 3 (outbound dest.); inbound SourceIp + Security client IpAddress",
+   "robust",
+   "LMD + Mordor"
+  ],
+  [
+   "Graph",
+   "host_out_degree_1h, rare_dst_pair",
+   "EID 3, Initiated = true",
+   "EID 3, Initiated = true",
+   "robust / binary",
+   "LMD + Mordor"
+  ],
+  [
+   "User",
+   "distinct_users_60s",
+   "User",
+   "User",
+   "robust",
+   "LMD"
+  ],
+  [
+   "Lineage",
+   "lolbin_parent_child, remote_exec_parent, remote_exec_after_inbound, image_is_lolbin, exec_from_staging, integrity_high",
+   "EID 1; Image-only flags on any event",
+   "EID 1 (+4688); Image-only flags on any event",
+   "binary",
+   "LMD + Mordor"
+  ],
+  [
+   "Command line",
+   "cmdline_entropy, cmdline_susp",
+   "EID 1",
+   "EID 1 / 4688",
+   "robust / binary",
+   "none (unvalidated)"
+  ],
+  [
+   "Network",
+   "admin_port_flag, initiated, is_ipv6",
+   "EID 3",
+   "EID 3",
+   "binary",
+   "LMD + Mordor"
+  ],
+  [
+   "Credential",
+   "lsass_access, cred_access_mask",
+   "EID 10",
+   "EID 10",
+   "binary",
+   "LMD"
+  ],
+  [
+   "Tool transfer",
+   "exec_file_drop, file_drop_staging",
+   "EID 11",
+   "EID 11",
+   "binary",
+   "Mordor"
+  ],
+  [
+   "Auth / service",
+   "explicit_cred_4648, network_logon_t3, kerberos_tgs_4769, admin_share_access, service_install",
+   "not collected \u2192 0, sec_observed = 0",
+   "Security 4624, 4648, 4769, 5140, 5145; System 7045, Security 4697",
+   "binary",
+   "none (unvalidated)"
+  ],
+  [
+   "Modality",
+   "sec_observed, net_observed",
+   "0 / cummax(EID 3 seen)",
+   "cummax(auth/service event seen) / cummax(EID 3 seen)",
+   "binary",
+   "none (unvalidated)"
+  ],
+  [
+   "Structural",
+   "event_category",
+   "EventID \u2192 24 one-hot (observed levels; 26 registry slots for the LSTM, \u00a76.1)",
+   "EventID \u2192 24 one-hot (observed levels; 26 registry slots)",
+   "one-hot",
+   "LMD + Mordor"
+  ]
+ ],
+ "n_registry_levels": 26,
+ "D_lstm_registry": 60,
+ "n_by_family": {
+  "Temporal": 1,
+  "Velocity": 3,
+  "Fan-out": 5,
+  "Graph": 2,
+  "User": 1,
+  "Lineage": 6,
+  "Command line": 2,
+  "Network": 3,
+  "Credential": 2,
+  "Tool transfer": 2,
+  "Auth / service": 5,
+  "Modality": 2,
+  "Structural": 1
+ }
+}

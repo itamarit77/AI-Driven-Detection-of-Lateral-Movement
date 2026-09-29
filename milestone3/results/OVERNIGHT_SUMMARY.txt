@@ -1,0 +1,65 @@
+2026-09-27 17:41:46 ==== overnight.sh started (model llama3.1:8b-instruct-q4_K_M, ollama http://localhost:11434) ====
+2026-09-27 17:56:47 still waiting for the running pipeline (15 min); last log line: 2026-09-27 17:56:38,260 m3 INFO cross mordor->lmd if unified quantile: F1 0.1564 AUC 0.6285592286630901
+2026-09-27 18:11:47 still waiting for the running pipeline (30 min); last log line: 2026-09-27 18:10:54,466 m3.models INFO lstm epoch {'epoch': 5, 'train_loss': 0.07509182258030389, 'val_auc': 0.9949187994461817}
+2026-09-27 18:13:47 no run_m3.py process running; last log line: 2026-09-27 18:13:44,050 m3 INFO ==== stage collect done in 4s ====
+2026-09-27 18:13:52 run_m3.py --stage all --skip-llm exit code 0
+2026-09-27 18:13:52 ollama is not installed: skipping the LLM stage (install it, then run: python run_m3.py --stage llm && python run_m3.py --stage collect)
+2026-09-27 18:13:54 collect stage exit code 0
+--- files present ---
+OVERNIGHT_SUMMARY.txt 919
+cascade_lmd.json 3663
+cascade_mordor.json 4952
+cross_lmd_to_mordor_if_reduced_quantile.json 1392
+cross_lmd_to_mordor_if_reduced_raw.json 1301
+cross_lmd_to_mordor_if_unified_quantile.json 1359
+cross_lmd_to_mordor_if_unified_raw.json 1303
+cross_lmd_to_mordor_lgbm_reduced_quantile.json 1336
+cross_lmd_to_mordor_lgbm_reduced_raw.json 1396
+cross_lmd_to_mordor_lgbm_unified_quantile.json 1413
+cross_lmd_to_mordor_lgbm_unified_raw.json 1392
+cross_lmd_to_mordor_lstm_unified_quantile.json 1335
+cross_lmd_to_mordor_lstm_unified_raw.json 1372
+cross_lmd_to_mordor_rf_reduced_quantile.json 1330
+cross_lmd_to_mordor_rf_reduced_raw.json 1389
+cross_lmd_to_mordor_rf_unified_quantile.json 1338
+cross_lmd_to_mordor_rf_unified_raw.json 1398
+cross_mordor_to_lmd_if_reduced_quantile.json 1357
+cross_mordor_to_lmd_if_reduced_raw.json 1297
+cross_mordor_to_lmd_if_unified_quantile.json 1350
+cross_mordor_to_lmd_if_unified_raw.json 1324
+cross_mordor_to_lmd_lgbm_reduced_quantile.json 1209
+cross_mordor_to_lmd_lgbm_reduced_raw.json 1271
+cross_mordor_to_lmd_lgbm_unified_quantile.json 1364
+cross_mordor_to_lmd_lgbm_unified_raw.json 1407
+cross_mordor_to_lmd_lstm_unified_quantile.json 1330
+cross_mordor_to_lmd_lstm_unified_raw.json 1329
+cross_mordor_to_lmd_rf_reduced_quantile.json 1367
+cross_mordor_to_lmd_rf_reduced_raw.json 1356
+cross_mordor_to_lmd_rf_unified_quantile.json 1411
+cross_mordor_to_lmd_rf_unified_raw.json 1357
+cv_lmd_if.json 20933
+cv_lmd_lgbm.json 21841
+cv_lmd_lstm.json 23408
+cv_lmd_rf.json 21426
+cv_mordor_if.json 20537
+cv_mordor_lgbm.json 20903
+cv_mordor_lgbm_reduced.json 7661
+cv_mordor_lstm.json 22620
+cv_mordor_rf.json 20708
+cv_mordor_rf_reduced.json 7581
+facts_lmd.json 800
+facts_mordor.json 767
+m3_results.json 303632
+models_listing.txt 621
+report_meta_template.json 758
+run.log 45969
+sens_lmd_if.json 2654
+sens_lmd_lgbm.json 4339
+sens_lmd_lstm.json 3227
+sens_lmd_rf.json 3346
+sens_mordor_if.json 2660
+sens_mordor_lgbm.json 4419
+sens_mordor_lstm.json 3243
+sens_mordor_rf.json 3335
+m3_results.json ok; llm results present for: []
+2026-09-27 18:13:59 ==== done: results zipped as m3_results_20260927_1813.zip (107M) ====

@@ -1,0 +1,43 @@
+{
+ "rows": 783367,
+ "attack_rows": 29549,
+ "attack_rate": 0.03772050648035978,
+ "hosts": 4,
+ "start": "2020-05-02 02:55:26.493000",
+ "end": "2020-05-02 08:29:23.303000",
+ "address_kinds": {
+  "outbound_dest": {
+   "benign": {
+    "unicast": 0.9689,
+    "broadcast": 0.0214,
+    "multicast": 0.0097
+   },
+   "n_benign": 1029,
+   "attack": {
+    "unicast": 1.0
+   },
+   "n_attack": 1339
+  },
+  "inbound_src": {
+   "benign": {
+    "unicast": 0.9742,
+    "broadcast": 0.021,
+    "multicast": 0.0048
+   },
+   "n_benign": 1047,
+   "n_attack": 0
+  },
+  "security_client": {
+   "benign": {
+    "unicast": 0.5628,
+    "null": 0.3341,
+    "loopback": 0.1031
+   },
+   "n_benign": 892,
+   "n_attack": 0
+  }
+ },
+ "seed_processes": 44,
+ "malicious_processes": 91,
+ "quick": false
+}

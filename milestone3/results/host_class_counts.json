@@ -1,0 +1,46 @@
+{
+ "lmd": {
+  "LAPTOP-ROPR18AK": {
+   "attack": 16,
+   "benign": 1513113
+  },
+  "WIN-J23NIGGP1Q6.sysmon_set.local": {
+   "attack": 26758,
+   "benign": 48786
+  },
+  "WINDOWS10EVAL.stefania.local": {
+   "attack": 3695,
+   "benign": 49710
+  },
+  "win-dc-128.attackrange.local": {
+   "attack": 79383,
+   "benign": 8
+  },
+  "win-dc-469.attackrange.local": {
+   "attack": 60,
+   "benign": 0
+  },
+  "win-host-987.attackrange.local": {
+   "attack": 31305,
+   "benign": 2
+  }
+ },
+ "mordor": {
+  "NASHUA.dmevals.local": {
+   "attack": 2782,
+   "benign": 37637
+  },
+  "NEWYORK.dmevals.local": {
+   "attack": 428,
+   "benign": 52714
+  },
+  "SCRANTON.dmevals.local": {
+   "attack": 21809,
+   "benign": 175729
+  },
+  "UTICA.dmevals.local": {
+   "attack": 4530,
+   "benign": 487738
+  }
+ }
+}

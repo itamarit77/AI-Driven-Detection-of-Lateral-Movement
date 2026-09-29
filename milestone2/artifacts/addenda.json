@@ -1,0 +1,237 @@
+{
+ "lmd_broadcast": {
+  "n_eid3_rows": 1408089,
+  "admin_port": {
+   "admin_ports": [
+    88,
+    135,
+    139,
+    389,
+    445,
+    464,
+    636,
+    3389,
+    5722,
+    5985,
+    5986,
+    47001
+   ],
+   "unicast_inbound_rows": {
+    "benign": 20700,
+    "attack": 16034
+   },
+   "unicast_inbound_on_admin_port_share": {
+    "all": 0.409,
+    "benign": 0.083,
+    "attack": 0.829
+   },
+   "admin_port_inbound_rows": {
+    "benign": 1716,
+    "attack": 13294
+   },
+   "attack_admin_port_inbound_by_port": {
+    "389": 9286,
+    "135": 1963,
+    "88": 1846,
+    "445": 83,
+    "5985": 59,
+    "3389": 45,
+    "464": 12
+   },
+   "benign_admin_port_inbound_by_port": {
+    "445": 1682,
+    "5985": 32,
+    "88": 2
+   },
+   "attack_share_ldap_kerberos": 0.838,
+   "attack_share_remote_service_ports": 0.162,
+   "attack_admin_port_inbound_by_host": {
+    "WIN-J23NIGGP1Q6.sysmon_set.local": 12740,
+    "win-dc-128.attackrange.local": 410,
+    "win-host-987.attackrange.local": 99,
+    "WINDOWS10EVAL.stefania.local": 45
+   }
+  },
+  "own_host_prefixes_24": [
+   "10.0.1",
+   "192.168.1",
+   "192.168.128",
+   "192.168.156",
+   "192.168.16",
+   "192.168.179",
+   "192.168.214",
+   "192.168.229",
+   "192.168.76",
+   "192.168.98"
+  ],
+  "n_255_addresses": 11,
+  "addresses": {
+   "10.0.1.255": {
+    "outbound_rows": 12,
+    "inbound_rows": 12,
+    "kind": "/24 of a monitored host"
+   },
+   "169.254.255.255": {
+    "outbound_rows": 372301,
+    "inbound_rows": 369610,
+    "kind": "link-local broadcast (169.254.0.0/16)"
+   },
+   "192.168.1.255": {
+    "outbound_rows": 21188,
+    "inbound_rows": 25341,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.128.255": {
+    "outbound_rows": 23333,
+    "inbound_rows": 22996,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.156.255": {
+    "outbound_rows": 23333,
+    "inbound_rows": 22996,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.16.255": {
+    "outbound_rows": 23333,
+    "inbound_rows": 22996,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.179.255": {
+    "outbound_rows": 23333,
+    "inbound_rows": 22996,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.214.255": {
+    "outbound_rows": 23333,
+    "inbound_rows": 22996,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.229.255": {
+    "outbound_rows": 23332,
+    "inbound_rows": 22995,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.76.255": {
+    "outbound_rows": 23332,
+    "inbound_rows": 22995,
+    "kind": "/24 of a monitored host"
+   },
+   "192.168.98.255": {
+    "outbound_rows": 23333,
+    "inbound_rows": 22996,
+    "kind": "/24 of a monitored host"
+   }
+  },
+  "n_unexplained": 0,
+  "outbound_255_rows": 580163,
+  "outbound_255_attack_rows": 12,
+  "inbound_255_rows": 578929,
+  "inbound_255_attack_rows": 12,
+  "n_private_24_networks": 10
+ },
+ "mordor": {
+  "n_rows": 783367,
+  "broadcast": {
+   "own_host_prefixes_24": [
+    "10.0.0",
+    "10.0.1"
+   ],
+   "addresses": {
+    "10.0.1.255 outbound": 18,
+    "10.0.1.255 inbound": 18,
+    "10.0.0.255 outbound": 4,
+    "10.0.0.255 inbound": 4
+   },
+   "n_255_addresses": 2,
+   "n_unexplained": 0
+  },
+  "sysmon_range_ids_from_other_channels": {
+   "n_rows": 78,
+   "by_channel_and_id": {
+    "System 6": 22,
+    "System 16": 15,
+    "System 11": 6,
+    "System 1": 6,
+    "System 10": 4,
+    "System 20": 4,
+    "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 23": 3,
+    "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 24": 2,
+    "System 13": 2,
+    "System 12": 2,
+    "System 25": 2,
+    "System 18": 2,
+    "System 3": 2,
+    "System 14": 2,
+    "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 21": 2,
+    "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 22": 2
+   },
+   "by_channel": {
+    "System": 69,
+    "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational": 9
+   },
+   "pct_rows": 0.01
+  },
+  "modality_ambiguity": {
+   "n_rows": 783367,
+   "sec_observed_ids": [
+    4624,
+    4648,
+    4688,
+    4769,
+    5140,
+    5145,
+    7045,
+    4697
+   ],
+   "net_observed_ids": [
+    3
+   ],
+   "hosts": {
+    "NASHUA.dmevals.local": {
+     "rows": 40419,
+     "rows_sec_zero": 1720,
+     "seconds_sec_zero": 248.967,
+     "attack_rows_in_sec_zero": 0,
+     "rows_net_zero": 249,
+     "seconds_net_zero": 46.387,
+     "attack_rows_in_net_zero": 0
+    },
+    "NEWYORK.dmevals.local": {
+     "rows": 53142,
+     "rows_sec_zero": 20,
+     "seconds_sec_zero": 28.222,
+     "attack_rows_in_sec_zero": 0,
+     "rows_net_zero": 3,
+     "seconds_net_zero": 0.0,
+     "attack_rows_in_net_zero": 0
+    },
+    "SCRANTON.dmevals.local": {
+     "rows": 197538,
+     "rows_sec_zero": 90,
+     "seconds_sec_zero": 29.237,
+     "attack_rows_in_sec_zero": 0,
+     "rows_net_zero": 161,
+     "seconds_net_zero": 34.272,
+     "attack_rows_in_net_zero": 0
+    },
+    "UTICA.dmevals.local": {
+     "rows": 492268,
+     "rows_sec_zero": 8847,
+     "seconds_sec_zero": 1624.116,
+     "attack_rows_in_sec_zero": 0,
+     "rows_net_zero": 810,
+     "seconds_net_zero": 115.772,
+     "attack_rows_in_net_zero": 0
+    }
+   },
+   "rows_sec_zero_total": 10677,
+   "pct_sec_zero": 1.36,
+   "max_seconds_sec_zero": 1624.116,
+   "attack_rows_in_sec_zero_total": 0,
+   "rows_net_zero_total": 1223,
+   "pct_net_zero": 0.16,
+   "max_seconds_net_zero": 115.772,
+   "attack_rows_in_net_zero_total": 0
+  }
+ }
+}

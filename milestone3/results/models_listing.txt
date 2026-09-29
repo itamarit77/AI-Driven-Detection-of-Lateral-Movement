@@ -1,0 +1,11 @@
+total 13760
+drwxrwxr-x  2 user user    4096 Sep 27 14:53 .
+drwxr-xr-x 12 user user    4096 Sep 28 16:48 ..
+-rw-rw-r--  1 user user 2739034 Sep 27 14:17 lmd_if_fold0.pkl
+-rw-rw-r--  1 user user  866725 Sep 28 13:54 lmd_lgbm_fold0.pkl
+-rw-rw-r--  1 user user  185417 Sep 27 14:22 lmd_lstm_fold0.pt
+-rw-rw-r--  1 user user 4982832 Sep 27 14:09 lmd_rf_fold0.pkl
+-rw-rw-r--  1 user user 2085916 Sep 27 14:46 mordor_if_fold0.pkl
+-rw-rw-r--  1 user user    6635 Sep 28 13:56 mordor_lgbm_fold0.pkl
+-rw-rw-r--  1 user user  185480 Sep 27 14:53 mordor_lstm_fold0.pt
+-rw-rw-r--  1 user user 3012442 Sep 27 14:41 mordor_rf_fold0.pkl

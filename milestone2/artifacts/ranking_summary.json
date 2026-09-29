@@ -1,0 +1,28 @@
+{
+  "LMD": {
+    "auc_random": 0.9999997078145271,
+    "prauc_random": 0.9999994591383364,
+    "auc_grouped": 1.0,
+    "prauc_grouped": 1.0,
+    "test_pos_rate": 0.35304166666666664,
+    "n": 400000,
+    "auc_grouped_no_time": 0.9999569745137691,
+    "prauc_grouped_no_time": 0.9999217677680166
+  },
+  "Mordor": {
+    "auc_random": 0.9991689040663363,
+    "prauc_random": 0.9922525396450793,
+    "auc_grouped": 0.9846781479929221,
+    "prauc_grouped": 0.9600938088922414,
+    "test_pos_rate": 0.073875,
+    "n": 400000,
+    "auc_grouped_no_time": 0.9818378015295991,
+    "prauc_grouped_no_time": 0.9491652226996402,
+    "auc_grouped_no_time_no_seedoverlap": 0.6548691751170463,
+    "prauc_grouped_no_time_no_seedoverlap": 0.37114344062262233
+  },
+  "cross_rank_spearman": 0.6010146469192373,
+  "cross_rank_spearman_p": 2.5681263297070548e-05,
+  "cross_rank_spearman_perm": 0.6435611038107754,
+  "cross_rank_basis": "composite = mean(RF MDI share, LightGBM gain share)"
+}
